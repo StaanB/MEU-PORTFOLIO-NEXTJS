@@ -7,7 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      width: {'128': "32rem",}
+      width: { 128: "32rem" },
+    },
+    backgroundImage: {
+      eu: 'url("../assets/me-profile.jpeg")',
+      background: 'url("../assets/background-main-page.jpg")',
     },
   },
   plugins: [],

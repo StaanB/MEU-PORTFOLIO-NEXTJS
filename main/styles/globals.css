@@ -22,15 +22,16 @@
   }
 }
 
-:root{
-  --cinza-100: #332E33;
+:root {
+  --cinza-100: #332e33;
   --cinza-600: #111111;
   --laranja-600: #ea580c;
 }
 
 body {
   background: var(--cinza-600);
-  color: #FFFFFF;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 /* Definindo as fontes e o tamanho nos globais. */
 body,
@@ -48,4 +49,41 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.background {
+  background-image: linear-gradient(
+      to top,
+      rgba(17, 17, 17, 0.1),
+      rgba(17, 17, 17, 0.9)
+    ),
+    url("../assets/background-main-page.jpg");
+  background-size: cover;
+}
+
+.card {
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #332e33;
+  gap: 1rem;
+  border-radius: 0.367rem;
+  padding: 6px;
+  transition: all 0.7s ease;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card svg {
+  font-size: 2rem;
+}
+
+.card p {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
 }

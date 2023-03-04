@@ -1,4 +1,17 @@
+// Import Motion
 import { motion } from "framer-motion";
+
+// Import variáveis do Motion
+import {
+  navTitulo,
+  navInicio,
+  navSobre,
+  navHabilidades,
+  navProjetos,
+  navContato,
+} from "./motionVars";
+
+// Import Link do NextJS
 import Link from "next/link";
 
 export function NavBar() {
@@ -6,13 +19,9 @@ export function NavBar() {
     <>
       <nav className="w-11/12 h-12 m-auto flex justify-between items-center mb-4">
         <motion.p
-          initial={{ x: -200 }}
-          animate={{ x: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            duration: 0.8,
-          }}
+          variants={navTitulo}
+          initial="oculto"
+          animate="emTela"
           whileHover={{ scale: 1.1 }}
           drag
           dragConstraints={{ left: 0, top: 0, bottom: 0, right: 0 }}
@@ -21,18 +30,17 @@ export function NavBar() {
           Stanley
         </motion.p>
 
-        <ul className="text-sm font-bold uppercase flex gap-5 cursor-pointer">
+        <ul className="text-sm font-bold uppercase flex gap-7 cursor-pointer">
           <Link href="/">
             <motion.li
-              initial={{ x: 200 }}
-              animate={{ x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 50,
-                duration: 0.8,
-                delay: 0.1,
+              variants={navInicio}
+              initial="oculto"
+              animate="emTela"
+              whileHover={{
+                scale: 1.2,
+                originX: 0,
+                color: "#ea580c",
               }}
-              whileHover={{ scale: 1.2, color: "var(--laranja-600)" }}
             >
               Inicio
             </motion.li>
@@ -40,58 +48,54 @@ export function NavBar() {
 
           <Link href="/sobre">
             <motion.li
-              initial={{ x: 200 }}
-              animate={{ x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 50,
-                duration: 0.8,
-                delay: 0.2,
+              variants={navSobre}
+              initial="oculto"
+              animate="emTela"
+              whileHover={{
+                scale: 1.2,
+                originX: 0,
+                color: "#ea580c",
               }}
-              whileHover={{ scale: 1.2, color: "var(--laranja-600)" }}
             >
               Sobre
             </motion.li>
           </Link>
 
           <motion.li
-            initial={{ x: 200 }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              duration: 0.8,
-              delay: 0.3,
+            variants={navHabilidades}
+            initial="oculto"
+            animate="emTela"
+            whileHover={{
+              scale: 1.2,
+              originX: 0,
+              color: "#ea580c",
             }}
-            whileHover={{ scale: 1.2, color: "var(--laranja-600)" }}
           >
             Habilidades
           </motion.li>
 
           <motion.li
-            initial={{ x: 200 }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              duration: 0.8,
-              delay: 0.4,
+            variants={navProjetos}
+            initial="oculto"
+            animate="emTela"
+            whileHover={{
+              scale: 1.2,
+              originX: 0,
+              color: "#ea580c",
             }}
-            whileHover={{ scale: 1.2, color: "var(--laranja-600)" }}
           >
             Projetos
           </motion.li>
 
           <motion.li
-            initial={{ x: 200 }}
-            animate={{ x: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              duration: 0.8,
-              delay: 0.5,
+            variants={navContato}
+            initial="oculto"
+            animate="emTela"
+            whileHover={{
+              scale: 1.2,
+              originX: 0,
+              color: "#ea580c",
             }}
-            whileHover={{ scale: 1.2, color: "var(--laranja-600)" }}
           >
             Contato
           </motion.li>
