@@ -1,49 +1,59 @@
 // Motion e motion vars
 import { motion } from "framer-motion";
-import {
-  h1MainContainer,
-  mainContainer,
-  pMainContainer,
-  ulMainContainer,
-} from "./motionVars";
+import { HeroBannerVars } from "./motionVars";
 
 // Next Link
 import Link from "next/link";
+
 // Icons
 import { BsGithub, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
-export const HeroBanner = () => {
+export function HeroBanner() {
   return (
     <>
       <motion.div className="background bg-cover w-screen h-fit flex justify-center items-center">
         <motion.div
-          variants={mainContainer}
-          initial="oculto"
-          animate="emTela"
-          exit="exit"
+          variants={HeroBannerVars}
+          initial="containerOculto"
+          animate="containerEmTela"
+          exit="containerSaindo"
           className="w-96 h-auto bg-zinc-800 flex flex-col justify-center items-center mt-40 mb-20 m-auto rounded-md"
         >
           <motion.div
-            variants={mainContainer}
-            whileHover={{ scale: 0.9 }}
+            variants={HeroBannerVars}
+            initial="containerOculto"
+            animate="containerEmTela"
+            whileHover="fotoHover"
             className="bg-eu bg-cover w-96 h-96 rounded-full relative bottom-10 border-solid border-8 border-orange-600 shadow-[0px_0px_60px_20px_rgba(234,88,12,0.3)]"
           ></motion.div>
 
           <motion.h1
-            variants={h1MainContainer}
-            whileTap={{ color: "#ea580c", letterSpacing: "2px" }}
+            variants={HeroBannerVars}
+            initial="h1Fora"
+            animate="h1EmTela"
+            whileTap="h1Clicado"
             className="text-4xl font-bold tracking-wideler cursor-pointer"
           >
             Stanley Brenner
           </motion.h1>
 
-          <motion.p variants={pMainContainer} className="text-sm mb-10">
+          <motion.p
+            variants={HeroBannerVars}
+            initial="pFora"
+            animate="pEmTela"
+            className="text-sm mb-10"
+          >
             Desenvolvedor Front-End & Designer
           </motion.p>
 
-          <motion.ul variants={ulMainContainer} className="flex gap-7 mb-10">
+          <motion.ul
+            variants={HeroBannerVars}
+            initial="ulFora"
+            animate="ulEmTela"
+            className="flex gap-7 mb-10"
+          >
             <Link href="https://github.com/StaanB" target="_blank">
-              <BsGithub className="w-6 h-6 hover:text-orange-600 hover:scale-125 ease-in duration-200 cursor-pointer" />
+              <BsGithub className="w-6 h-6 hover:text-black hover:scale-125 ease-in duration-200 cursor-pointer" />
             </Link>
 
             <Link href="https://www.instagram.com/staanb/" target="_blank">
@@ -65,4 +75,4 @@ export const HeroBanner = () => {
       </motion.div>
     </>
   );
-};
+}

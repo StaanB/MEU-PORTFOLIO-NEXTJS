@@ -1,12 +1,12 @@
 // Váriaveis da Navbar
 
-export const navTitulo = {
-  oculto: {
+export const NavAnimations = {
+  nomeLaranjaFora: {
     opacity: 0,
     x: -200,
   },
 
-  emTela: {
+  nomeLaranjaEmTela: {
     opacity: 1,
     x: 0,
     transition: {
@@ -16,15 +16,17 @@ export const navTitulo = {
       duration: 1.4,
     },
   },
-};
 
-export const navInicio = {
-  oculto: {
+  nomeLaranjaHover: {
+    scale: 1.1,
+  },
+
+  NavInicioFora: {
     opacity: 0,
     x: 200,
   },
 
-  emTela: {
+  NavInicioTela: {
     opacity: 1,
     x: 0,
     transition: {
@@ -34,15 +36,19 @@ export const navInicio = {
       delay: 0.1,
     },
   },
-};
 
-export const navSobre = {
-  oculto: {
+  NavInicioHover: {
+    scale: 1.2,
+    originX: 0,
+    color: "#ea580c",
+  },
+
+  NavSobreFora: {
     opacity: 0,
     x: 200,
   },
 
-  emTela: {
+  NavSobreTela: {
     opacity: 1,
     x: 0,
     transition: {
@@ -52,15 +58,19 @@ export const navSobre = {
       delay: 0.3,
     },
   },
-};
 
-export const navHabilidades = {
-  oculto: {
+  NavSobreHover: {
+    scale: 1.2,
+    originX: 0,
+    color: "#ea580c",
+  },
+
+  NavHabilidadesFora: {
     opacity: 0,
     x: 200,
   },
 
-  emTela: {
+  NavHabilidadesTela: {
     opacity: 1,
     x: 0,
     transition: {
@@ -70,53 +80,69 @@ export const navHabilidades = {
       delay: 0.5,
     },
   },
-};
 
-export const navProjetos = {
-  oculto: {
+  NavHabilidadesHover: {
+    scale: 1.2,
+    originX: 0,
+    color: "#ea580c",
+  },
+
+  NavProjetoFora: {
     opacity: 0,
     x: 200,
   },
 
-  emTela: {
+  NavProjetoTela: {
     opacity: 1,
     x: 0,
     transition: {
       type: "spring",
       stiffness: 110,
       duration: 2,
-      delay: 0.7,
+      delay: 0.5,
     },
   },
-};
 
-export const navContato = {
-  oculto: {
+  NavProjetoHover: {
+    scale: 1.2,
+    originX: 0,
+    color: "#ea580c",
+  },
+
+  NavContatoFora: {
     opacity: 0,
     x: 200,
   },
 
-  emTela: {
+  NavContatoTela: {
     opacity: 1,
     x: 0,
     transition: {
       type: "spring",
       stiffness: 110,
       duration: 2,
-      delay: 0.9,
+      delay: 0.5,
     },
+  },
+
+  NavContatoHover: {
+    scale: 1.2,
+    originX: 0,
+    color: "#ea580c",
   },
 };
 
 // Variáveis da página principal
 
-export const mainContainer = {
-  oculto: {
+// Animações do Herobanner
+
+export const HeroBannerVars = {
+  containerOculto: {
     opacity: 0,
-    y: 500,
+    y: 1000,
   },
 
-  emTela: {
+  containerEmTela: {
     opacity: 1,
     y: 0,
     transition: {
@@ -127,18 +153,20 @@ export const mainContainer = {
     },
   },
 
-  exit: {
-    y: "-100vw"
-  }
-};
-
-export const h1MainContainer = {
-  oculto: {
-    opacity: 0,
-    y: 500,
+  containerSaindo: {
+    y: "-100vw",
   },
 
-  emTela: {
+  fotoHover: {
+    scale: 0.9,
+  },
+
+  h1Fora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  h1EmTela: {
     opacity: 1,
     y: 0,
     transition: {
@@ -148,15 +176,18 @@ export const h1MainContainer = {
       delay: 0.7,
     },
   },
-};
 
-export const pMainContainer = {
-  oculto: {
-    opacity: 0,
-    y: 500,
+  h1Clicado: {
+    color: "#ea580c",
+    letterSpacing: "2px",
   },
 
-  emTela: {
+  pFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  pEmTela: {
     opacity: 1,
     y: 0,
     transition: {
@@ -166,15 +197,13 @@ export const pMainContainer = {
       delay: 0.9,
     },
   },
-};
 
-export const ulMainContainer = {
-  oculto: {
+  ulFora: {
     opacity: 0,
-    y: 500,
+    y: 1000,
   },
 
-  emTela: {
+  ulEmTela: {
     opacity: 1,
     y: 0,
     transition: {
@@ -182,6 +211,27 @@ export const ulMainContainer = {
       stiffness: 40,
       duration: 0.7,
       delay: 1.1,
+    },
+  },
+};
+
+
+// Animações do About me
+
+export const CardsAnimation = {
+  inView: {
+    scale: [1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1],
+    transition: {
+      duration: 5,
+    },
+  },
+
+  ButtonAnimation: {
+    backgroundColor: "var(--laranja-600)",
+    borderColor: "var(--laranja-600)",
+    scale: 1.1,
+    transition: {
+      duration: 0.6,
     },
   },
 };

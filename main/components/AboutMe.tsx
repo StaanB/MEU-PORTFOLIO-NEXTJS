@@ -6,8 +6,9 @@ import { BsInfoCircle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { CgGym } from "react-icons/cg";
 import { IoGameController } from "react-icons/io5";
 import { MdCoffee, MdLocalMovies } from "react-icons/md";
+import { CardsAnimation } from "./motionVars";
 
-export const AboutMe = () => {
+export function AboutMe() {
   const informations = {
     "Data de nascimento": "08/12/2000",
     Celular: "+55 (71) 9 8689-5914",
@@ -25,9 +26,13 @@ export const AboutMe = () => {
         >
           <BsInfoCircle className="w-8 h-8 mt-10 mb-3 text-orange-600" />
 
-          <h2 className="mb-8 text-4xl font-bold underline decoration-orange-600">
+          <motion.h2
+            whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
+            transition={{ duration: 5 }}
+            className="mb-8 text-4xl font-bold underline decoration-orange-600"
+          >
             Sobre mim
-          </h2>
+          </motion.h2>
           <p className="text-start w-4/6">
             <span className="text-orange-600 font-bold leading-8">
               Oi, tudo bom? Stan aqui.{" "}
@@ -39,7 +44,7 @@ export const AboutMe = () => {
           </p>
         </motion.div>
 
-        <div className="w-4/6 flex justify-between">
+        <div className="w-4/6 flex justify-between about-section">
           <div className="flex flex-col gap-6">
             <h3 className="text-3xl font-bold">Detalhes pessoais</h3>
             <div className="flex gap-7">
@@ -74,45 +79,66 @@ export const AboutMe = () => {
             <h3 className="text-3xl font-bold">Meus interesses</h3>
 
             <div className="grid grid-cols-3 gap-6">
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <IoGameController />
                 <p>Jogos</p>
-              </div>
+              </motion.div>
 
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <BsYoutube />
                 <p>Youtube</p>
-              </div>
+              </motion.div>
 
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <MdLocalMovies />
                 <p>Filmes</p>
-              </div>
+              </motion.div>
 
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <MdCoffee />
                 <p>Café</p>
-              </div>
+              </motion.div>
 
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <BsSpotify />
                 <p>Música</p>
-              </div>
+              </motion.div>
 
-              <div className="card">
+              <motion.div
+                variants={CardsAnimation}
+                whileInView="inView"
+                className="card"
+              >
                 <CgGym />
                 <p>Academia</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
         <motion.a
-          whileHover={{
-            backgroundColor: "var(--laranja-600)",
-            borderColor: "var(--laranja-600)",
-          }}
+          whileHover="ButtonAnimation"
+          variants={CardsAnimation}
           href="https://i.imgur.com/8gtkPc9.png"
-          download="CV"
           target="_blank"
           className="mt-20 mb-10 border px-4 py-2 flex gap-2 cursor-pointer rounded-md"
         >
@@ -121,4 +147,4 @@ export const AboutMe = () => {
       </div>
     </>
   );
-};
+}
