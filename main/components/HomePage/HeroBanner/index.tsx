@@ -1,6 +1,6 @@
 // Motion e motion vars
 import { motion } from "framer-motion";
-import { HeroBannerVars } from "./motionVars";
+import { HeroBannerVars } from "../../motionVars";
 
 // Next Link
 import Link from "next/link";
@@ -11,7 +11,7 @@ import { BsGithub, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 export function HeroBanner() {
   return (
     <>
-      <motion.div className="background bg-cover w-screen h-fit flex justify-center items-center">
+      <motion.div className="background bg-cover w-screen h-fit flex justify-center items-center ">
         <motion.div
           variants={HeroBannerVars}
           initial="containerOculto"

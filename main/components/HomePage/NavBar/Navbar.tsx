@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 
 // Import variáveis do Motion
-import { NavAnimations } from "./motionVars";
+import { NavAnimations } from "../../motionVars";
 
-// Import Link do NextJS
-import Link from "next/link";
+// Importando Active Link
+import { ActiveLink } from "./ActiveLink";
 
 export function NavBar() {
   return (
@@ -24,8 +24,9 @@ export function NavBar() {
         </motion.p>
 
         <ul className="text-sm font-bold uppercase flex gap-7 cursor-pointer">
-          <Link href="/">
+          <ActiveLink href="/">
             <motion.li
+              id="inicio"
               variants={NavAnimations}
               initial="NavInicioFora"
               animate="NavInicioTela"
@@ -33,10 +34,11 @@ export function NavBar() {
             >
               Inicio
             </motion.li>
-          </Link>
+          </ActiveLink>
 
-          <Link href="/sobre">
+          <ActiveLink href="/sobre">
             <motion.li
+              id="sobre"
               variants={NavAnimations}
               initial="NavSobreFora"
               animate="NavSobreTela"
@@ -44,7 +46,7 @@ export function NavBar() {
             >
               Sobre
             </motion.li>
-          </Link>
+          </ActiveLink>
 
           <motion.li
             variants={NavAnimations}
@@ -77,3 +79,4 @@ export function NavBar() {
     </>
   );
 }
+

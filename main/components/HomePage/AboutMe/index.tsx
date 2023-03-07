@@ -6,7 +6,7 @@ import { BsInfoCircle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { CgGym } from "react-icons/cg";
 import { IoGameController } from "react-icons/io5";
 import { MdCoffee, MdLocalMovies } from "react-icons/md";
-import { CardsAnimation } from "./motionVars";
+import { CardsAnimation } from "../../motionVars";
 
 export function AboutMe() {
   const informations = {
@@ -44,7 +44,7 @@ export function AboutMe() {
           </p>
         </motion.div>
 
-        <div className="w-4/6 flex justify-between about-section">
+        <div className="w-4/6 flex max-[640px]:flex-col justify-between about-section">
           <div className="flex flex-col gap-6">
             <h3 className="text-3xl font-bold">Detalhes pessoais</h3>
             <div className="flex gap-7">
@@ -60,7 +60,7 @@ export function AboutMe() {
               <div>
                 {Object.values(informations).map((valor, key) => {
                   return (
-                    <p key={key} className="mb-3 tracking-widest">
+                    <p key={key} className="mb-3 tracking-[0.1rem] font-bold">
                       {valor}
                     </p>
                   );
@@ -69,7 +69,7 @@ export function AboutMe() {
             </div>
             <p className="flex gap-32 items-center">
               <span className="text-orange-600 font-bold">Status</span>{" "}
-              <span className="bg-green-900 p-1 font-bold rounded-md hover:bg-green-700 hover:scale-105 transition ease">
+              <span className="bg-green-900 p-1 font-bold rounded-md hover:bg-green-700 hover:scale-110 transition ease">
                 Buscando vaga JR
               </span>
             </p>

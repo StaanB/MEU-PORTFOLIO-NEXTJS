@@ -16,7 +16,7 @@ export function SkillsSection() {
             Habilidades
           </motion.h2>
 
-          <div className="w-4/6 h-auto flex items-center justify-evenly gap-96">
+          <div className="w-4/6 h-auto flex max-[640px]:flex-col items-center justify-evenly gap-96">
             <div className="w-full flex flex-col gap-5">
               <p className="text-3xl font-bold">Habilidades técnicas</p>
 

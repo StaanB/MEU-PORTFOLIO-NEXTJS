@@ -1,3 +1,4 @@
+// Import Motion
 import { motion } from "framer-motion";
 
 interface ProgressProps {
@@ -6,14 +7,13 @@ interface ProgressProps {
 }
 
 export function ProgressBar({ percent, title }: ProgressProps) {
-
   return (
     <>
       <p className="relative top-4 font-bold text-md">{title}</p>
       <div className="w-auto bg-[#111111] rounded-full h-4">
         <div
           className="bg-orange-600 h-4 rounded-full flex justify-end"
-          style={{ width: `${percent * 4.5}px` }}
+          style={{ width: `${percent * 0.28}rem` }}
         >
           <motion.span
             whileHover={{ scale: 1.1 }}
