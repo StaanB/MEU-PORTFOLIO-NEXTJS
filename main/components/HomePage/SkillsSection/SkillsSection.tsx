@@ -5,7 +5,7 @@ import { ProgressBar } from "./ProgressBar";
 export function SkillsSection() {
   return (
     <>
-      <div className="w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
+      <div className="max-[699px]:hidden w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
         <motion.div className="w-full flex flex-col justify-center items-center mb-20">
           <BsFillPersonLinesFill className="w-8 h-8 mt-10 mb-3 text-orange-600" />
           <motion.h2
@@ -16,7 +16,7 @@ export function SkillsSection() {
             Habilidades
           </motion.h2>
 
-          <div className="w-4/6 h-auto flex max-[640px]:flex-col items-center justify-evenly gap-96">
+          <div className="max-[1080px]:flex-col w-4/6 h-auto flex items-center justify-evenly gap-96">
             <div className="w-full flex flex-col gap-5">
               <p className="text-3xl font-bold">Habilidades técnicas</p>
 

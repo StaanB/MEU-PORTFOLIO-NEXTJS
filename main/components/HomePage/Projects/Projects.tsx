@@ -16,7 +16,7 @@ import Cadastros from "../../../assets/cadastro.png";
 export function Habilities() {
   return (
     <>
-      <motion.div className="w-screen h-auto flex flex-col justify-center items-center">
+      <motion.div className="max-[699px]:w-96 max-[699px]:ml-5 w-screen h-auto flex flex-col justify-center items-center">
         <div className="w-full flex flex-col  justify-center items-center mb-20">
           <BsBriefcaseFill className="w-8 h-8 mt-10 text-orange-600" />
           <motion.h2
@@ -26,7 +26,7 @@ export function Habilities() {
           >
             Projetos
           </motion.h2>
-          <div className="w-4/6 flex max-[640px]:flex-col items-center justify-between">
+          <div className="w-4/6 flex max-[1080px]:flex-col max-[1080px]:gap-7 items-center justify-between gap-8">
             <div className="w-15 h-auto p-3 gap-5 rounded-md bg-zinc-800 flex flex-col items-center justify-between hover:scale-110 transition-all ease-in-out">
               <Image
                 src={stMoney}

@@ -1,32 +1,46 @@
-// Import Motion
+// Import Motion e MotionVars
 import { motion } from "framer-motion";
-
-// Import variáveis do Motion
 import { NavAnimations } from "../../motionVars";
 
-// Importando Active Link
+// Import Active Link
 import { ActiveLink } from "./ActiveLink";
-import { MobileNavBar } from "./MobileNavBar";
 
-export function NavBar() {
+// Import Icones
+import { GiHamburgerMenu } from "react-icons/gi";
+
+// Import React
+import { useState } from "react";
+
+export const MobileNavBar = () => {
+  const [navMobile, setNavMobile] = useState(false);
+
+  function showNavBar() {
+    const navbar = document.getElementById("mobile-nav") as HTMLElement;
+
+    if (navMobile === false) {
+      navbar.classList.remove("oculto");
+      navbar.classList.add("em-tela");
+      setNavMobile(true);
+    } else {
+      navbar.classList.remove("em-tela");
+      navbar.classList.add("oculto");
+      setNavMobile(false);
+    }
+  }
+
   return (
     <>
-      <nav className="max-[699px]:w-96 max-[699px]:m-3 w-auto h-12 flex justify-between items-center mb-4">
-        <motion.p
-          variants={NavAnimations}
-          initial="nomeLaranjaFora"
-          animate="nomeLaranjaEmTela"
-          whileHover="nomeLaranjaHover"
-          drag
-          dragConstraints={{ left: 0, top: 0, bottom: 0, right: 0 }}
-          className="text-2xl text-orange-600 ml-9 font-bold tracking-wider cursor-pointer"
+      <button
+        onClick={showNavBar}
+        className="min-[700px]:hidden absolute left-[98%] "
+      >
+        <GiHamburgerMenu className="text-2xl" />
+      </button>
+      <nav>
+        <motion.ul
+          id="mobile-nav"
+          className="oculto max-[700px]:flex z-20 bg-[#27272a] rounded-md p-3 text-sm font-bold uppercase hidden gap-7 relative top-32 left-4 right-0 bottom-0"
         >
-          Stanley
-        </motion.p>
-
-        <MobileNavBar />
-
-        <ul className="max-[700px]:hidden mr-4 text-sm font-bold uppercase flex gap-7 cursor-pointer">
           <ActiveLink href="/">
             <motion.li
               id="inicio"
@@ -77,9 +91,8 @@ export function NavBar() {
           >
             Contato
           </motion.li>
-        </ul>
+        </motion.ul>
       </nav>
     </>
   );
-}
-
+};

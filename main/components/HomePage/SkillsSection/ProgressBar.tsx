@@ -1,5 +1,7 @@
 // Import Motion
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 interface ProgressProps {
   percent: number;
@@ -7,17 +9,25 @@ interface ProgressProps {
 }
 
 export function ProgressBar({ percent, title }: ProgressProps) {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <p className="relative top-4 font-bold text-md">{title}</p>
       <div className="w-auto bg-[#111111] rounded-full h-4">
         <div
-          className="bg-orange-600 h-4 rounded-full flex justify-end"
-          style={{ width: `${percent * 0.28}rem` }}
+          className="h-4 rounded-full flex justify-end"
+          style={{
+            width: `${percent * 0.28}rem`,
+            backgroundColor: theme?.hexadecimal,
+          }}
         >
           <motion.span
             whileHover={{ scale: 1.1 }}
-            className="w-auto p-3 bg-orange-600 rounded-full shadow-[0px_0px_30px_15px_rgba(234,88,12,0.3)] font-bold self-center"
+            className="w-auto p-3 rounded-full font-bold self-center"
+            style={{
+              backgroundColor: theme?.hexadecimal,
+              boxShadow: theme?.shadow,
+            }}
           >
             {percent}%
           </motion.span>

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /* Resets globais. */
 * {
   margin: 0;
@@ -10,7 +12,7 @@
 }
 
 :root {
-  --cinza-100: #27272A;
+  --cinza-100: #27272a;
   --cinza-600: #111111;
   --laranja-600: #ea580c;
 }
@@ -38,8 +40,30 @@ a {
   text-decoration: none;
 }
 
-/* Mudanças específicas no CSS */
+@media (max-width: 2000px) {
+  .oculto {
+    display: none !important;
+  }
 
+  .em-tela{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px){
+  .card{
+    width: 10rem !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  body{
+    overflow-x: auto;
+  }
+}
+
+/* Mudanças específicas no CSS */
 
 .background {
   background-image: linear-gradient(
@@ -51,13 +75,14 @@ a {
   background-size: cover;
 }
 
+
 .card {
   width: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #27272A;
+  background-color: #27272a;
   gap: 1rem;
   border-radius: 0.367rem;
   padding: 6px;

@@ -19,10 +19,10 @@ export function AboutMe() {
 
   return (
     <>
-      <div className="w-screen h-auto flex flex-col justify-center items-center">
+      <div className="max-[699px]:w-96 max-[699px]:ml-5 w-screen h-auto flex flex-col justify-center items-center">
         <motion.div
           exit={{ y: "-100vw" }}
-          className="w-full flex flex-col justify-center items-center mb-10"
+          className="max-[699px]:w-5/6 w-full flex flex-col justify-center items-center mb-10"
         >
           <BsInfoCircle className="w-8 h-8 mt-10 mb-3 text-orange-600" />
 
@@ -33,9 +33,9 @@ export function AboutMe() {
           >
             Sobre mim
           </motion.h2>
-          <p className="text-start w-4/6">
+          <p className="max-[699px]:w-5/6 max-[699px]:text-left text-start w-4/6">
             <span className="text-orange-600 font-bold leading-8">
-              Oi, tudo bom? Stan aqui.{" "}
+              Oi, tudo bom? Stan aqui. {" "}
             </span>
             Sou um desenvolvedor Front-end entusiasmado com a tecnologia e a
             forma como acessamos a internet nos dias de hoje. Além de ser um fã
@@ -44,14 +44,14 @@ export function AboutMe() {
           </p>
         </motion.div>
 
-        <div className="w-4/6 flex max-[640px]:flex-col justify-between about-section">
-          <div className="flex flex-col gap-6">
-            <h3 className="text-3xl font-bold">Detalhes pessoais</h3>
-            <div className="flex gap-7">
+        <div className="max-[699px]:w-5/6 max-[699px]:flex-col max-[375px]:text-center max-[1080px]:flex-col w-4/6 flex justify-between about-section">
+          <div className="max-[1080px]:mb-10 flex flex-col gap-6">
+            <h3 className="max-[699px]:text-2xl text-3xl font-bold">Detalhes pessoais</h3>
+            <div className="max-[375px]:text-sm  flex gap-7">
               <div>
                 {Object.keys(informations).map((info, key) => {
                   return (
-                    <p key={key} className="text-orange-600 font-bold mb-3">
+                    <p key={key} className="max-[699px]:text-left max-[699px]:mb-4 text-orange-600 font-bold mb-3">
                       {info}
                     </p>
                   );
@@ -60,7 +60,7 @@ export function AboutMe() {
               <div>
                 {Object.values(informations).map((valor, key) => {
                   return (
-                    <p key={key} className="mb-3 tracking-[0.1rem] font-bold">
+                    <p key={key} className="max-[699px]:mb-[1.40rem] max-[699px]:text-left mb-3 tracking-[0.1rem] font-bold">
                       {valor}
                     </p>
                   );
@@ -75,10 +75,10 @@ export function AboutMe() {
             </p>
           </div>
 
-          <div className="w-2/6 flex flex-col gap-5">
-            <h3 className="text-3xl font-bold">Meus interesses</h3>
+          <div className="max-[1080px]:items-center max-[1080px]:w-full w-2/6 flex flex-col gap-5">
+            <h3 className="max-[699px]:text-2xl max-[375px]:w-72 text-3xl font-bold">Meus interesses</h3>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="max-[375px]:grid-cols-1 max-[1080px]:grid-cols-2 max-[1080px]:gap-24  grid grid-cols-3 gap-6">
               <motion.div
                 variants={CardsAnimation}
                 whileInView="inView"

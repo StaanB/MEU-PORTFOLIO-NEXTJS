@@ -137,6 +137,7 @@ export const NavAnimations = {
 // Animações do Herobanner
 
 export const HeroBannerVars = {
+  
   containerOculto: {
     opacity: 0,
     y: 1000,
@@ -178,7 +179,6 @@ export const HeroBannerVars = {
   },
 
   h1Clicado: {
-    color: "#ea580c",
     letterSpacing: "2px",
   },
 

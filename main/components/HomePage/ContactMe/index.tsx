@@ -15,11 +15,15 @@ import { AiFillMail, AiFillRightCircle } from "react-icons/ai";
 
 // Import mensagem para whatsapp
 import { sendWhatsMessage } from "./sendWhatsMessage";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 export function ContactMe() {
+  const {theme, setYellow, setOrange} = useContext(ThemeContext)
+
   return (
     <>
-      <div className="w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
+      <div className="max-[699px]:w-96 max-[699px]:ml-4 w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
         <BsPhoneFill className="w-8 h-8 mt-10 mb-3 text-orange-600" />
         <motion.h2
           whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
@@ -29,7 +33,7 @@ export function ContactMe() {
           Contato
         </motion.h2>
 
-        <div className="w-5/6 mr-10 flex justify-between items-center mb-10">
+        <div className="max-[1080px]:flex-col max-[1080px]:gap-10 max-[1080px]:ml-6 w-5/6 mr-10 flex justify-between items-center mb-10">
           <div className="flex flex-col items-center gap-5">
             <BsTelephoneFill className="text-4xl text-orange-600" />
             <h2 className="text-2xl font-bold">Por telefone</h2>
@@ -80,6 +84,10 @@ export function ContactMe() {
           </div>
         </div>
       </div>
+     <p style={{color: theme?.hexadecimal}}>{theme?.hexadecimal}</p>
+     <button onClick={setYellow}>amarelo</button>
+     <br />
+     <button onClick={setOrange}>Laranja</button>
     </>
   );
 }

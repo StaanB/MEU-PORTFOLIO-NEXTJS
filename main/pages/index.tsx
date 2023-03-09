@@ -6,23 +6,26 @@ import { AboutMe } from "../components/HomePage/AboutMe";
 import { SkillsSection } from "../components/HomePage/SkillsSection/SkillsSection";
 import { Habilities } from "../components/HomePage/Projects/Projects";
 import { ContactMe } from "../components/HomePage/ContactMe";
+import { ThemeProvider } from "../components/HomePage/ThemeProvider/ThemeContext";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Stanley</title>
-      </Head>
+      <ThemeProvider>
+        <Head>
+          <title>Stanley</title>
+        </Head>
 
-      <HeroBanner />
+        <HeroBanner />
 
-      <AboutMe />
+        <AboutMe />
 
-      <SkillsSection />
+        <SkillsSection />
 
-      <Habilities />
+        <Habilities />
 
-      <ContactMe/>
+        <ContactMe />
+      </ThemeProvider>
     </>
   );
 }
