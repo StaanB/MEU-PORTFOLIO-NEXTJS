@@ -40,7 +40,6 @@ export const NavAnimations = {
   NavInicioHover: {
     scale: 1.2,
     originX: 0,
-    color: "#ea580c",
   },
 
   NavSobreFora: {
@@ -62,7 +61,6 @@ export const NavAnimations = {
   NavSobreHover: {
     scale: 1.2,
     originX: 0,
-    color: "#ea580c",
   },
 
   NavHabilidadesFora: {
@@ -84,7 +82,6 @@ export const NavAnimations = {
   NavHabilidadesHover: {
     scale: 1.2,
     originX: 0,
-    color: "#ea580c",
   },
 
   NavProjetoFora: {
@@ -99,14 +96,13 @@ export const NavAnimations = {
       type: "spring",
       stiffness: 110,
       duration: 2,
-      delay: 0.5,
+      delay: 0.7,
     },
   },
 
   NavProjetoHover: {
     scale: 1.2,
     originX: 0,
-    color: "#ea580c",
   },
 
   NavContatoFora: {
@@ -121,23 +117,137 @@ export const NavAnimations = {
       type: "spring",
       stiffness: 110,
       duration: 2,
-      delay: 0.5,
+      delay: 0.9,
     },
   },
 
   NavContatoHover: {
     scale: 1.2,
     originX: 0,
-    color: "#ea580c",
   },
 };
 
 // Variáveis da página principal
 
+// Animaçõs dos temas de cores
+export const ColorsVars = {
+  coresOcultas: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  coresEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delayChildren: 0.3,
+    },
+  },
+
+  bandeiraFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  bandeiraEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 0.5,
+    },
+  },
+
+  amareloFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  amareloEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 0.7,
+    },
+  },
+
+  verdeFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  verdeEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 0.9,
+    },
+  },
+
+  laranjaFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  laranjaEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 1.1,
+    },
+  },
+
+  azulFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  azulEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 1.3,
+    },
+  },
+  
+  vermelhoFora: {
+    opacity: 0,
+    y: 1000,
+  },
+
+  vermelhoEmTela: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      duration: 0.7,
+      delay: 1.7,
+    },
+  },
+  
+};
+
 // Animações do Herobanner
 
 export const HeroBannerVars = {
-  
   containerOculto: {
     opacity: 0,
     y: 1000,
@@ -150,7 +260,7 @@ export const HeroBannerVars = {
       type: "spring",
       stiffness: 110,
       duration: 0.7,
-      delayChildren: 0.5,
+      delayChildren: 0.3,
     },
   },
 
@@ -215,7 +325,6 @@ export const HeroBannerVars = {
   },
 };
 
-
 // Animações do About me
 
 export const CardsAnimation = {
@@ -227,8 +336,6 @@ export const CardsAnimation = {
   },
 
   ButtonAnimation: {
-    backgroundColor: "var(--laranja-600)",
-    borderColor: "var(--laranja-600)",
     scale: 1.1,
     transition: {
       duration: 0.6,

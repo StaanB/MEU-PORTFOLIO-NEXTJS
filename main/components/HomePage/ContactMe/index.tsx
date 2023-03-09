@@ -15,67 +15,101 @@ import { AiFillMail, AiFillRightCircle } from "react-icons/ai";
 
 // Import mensagem para whatsapp
 import { sendWhatsMessage } from "./sendWhatsMessage";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 export function ContactMe() {
-  const {theme, setYellow, setOrange} = useContext(ThemeContext)
+  // Tema e idioma
+  const { theme, lang } = useContext(ThemeContext);
+  const [emailHover, setEmailHover] = useState(false);
 
   return (
     <>
       <div className="max-[699px]:w-96 max-[699px]:ml-4 w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
-        <BsPhoneFill className="w-8 h-8 mt-10 mb-3 text-orange-600" />
+        <BsPhoneFill
+          className="w-8 h-8 mt-10 mb-3"
+          style={{ color: theme?.hexadecimal }}
+        />
         <motion.h2
           whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
           transition={{ duration: 5 }}
-          className="mb-20 text-4xl font-bold underline decoration-orange-600"
+          className="mb-20 text-4xl font-bold underline"
+          style={{ textDecorationColor: theme?.hexadecimal }}
         >
-          Contato
+          {lang === "pt-BR" ? "Contato" : "Contact"}
         </motion.h2>
 
         <div className="max-[1080px]:flex-col max-[1080px]:gap-10 max-[1080px]:ml-6 w-5/6 mr-10 flex justify-between items-center mb-10">
           <div className="flex flex-col items-center gap-5">
-            <BsTelephoneFill className="text-4xl text-orange-600" />
-            <h2 className="text-2xl font-bold">Por telefone</h2>
+            <BsTelephoneFill
+              className="text-4xl"
+              style={{ color: theme?.hexadecimal }}
+            />
+            <h2 className="text-2xl font-bold">
+              {lang === "pt-BR" ? "Por telefone" : "By phone"}
+            </h2>
             <div className="flex flex-col gap-10 items-center">
               <span className="w-4/6 text-center opacity-50">
-                (Disponível de segunda a sexta das 8:00 ás 20:00).
+                {lang === "pt-BR"
+                  ? "(Disponível de segunda a sexta das 8h ás 20h)"
+                  : "(Available from Monday to Friday from 8 AM to 8 PM)"}
               </span>
               <Link
-                className="font-bold text-xl text-orange-600"
+                className="font-bold text-xl"
+                style={{ color: theme?.hexadecimal }}
                 href="tel:5571986895914"
               >
-                +55 (71) 98689-5914
+                {lang === "pt-BR" ? "+55 (71) 9 8689-5914" : "+55 71986895914"}
               </Link>
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <AiFillMail className="text-4xl text-orange-600" />
-            <h2 className="text-2xl font-bold">Me mande um email</h2>
+            <AiFillMail
+              className="text-4xl"
+              style={{ color: theme?.hexadecimal }}
+            />
+            <h2 className="text-2xl font-bold">
+              {lang === "pt-BR" ? "Me mande um email" : "Send me a mail"}
+            </h2>
             <p className="w-4/6 text-center opacity-50">
-              Caso precise enviar um email mais detalhado pode me enviar um
-              email privado.
+              {lang === "pt-BR"
+                ? "Caso precise de um texto mais elaborado pode me enviar um email privado."
+                : "If you need a more elaborate text, you can send me a private email."}
             </p>
             <Link
-              className="border px-4 py-2 flex gap-2 cursor-pointer rounded-md transition-all duration-500 ease-in-out hover:bg-orange-600 hover:border-orange-600 hover:scale-110"
+              className="border px-4 py-2 flex gap-2 cursor-pointer rounded-md transition-all duration-500 ease-in-out hover:scale-110"
+              onMouseEnter={() => setEmailHover(true)}
+              onMouseLeave={() => setEmailHover(false)}
+              style={{
+                backgroundColor: emailHover
+                  ? theme?.hexadecimal
+                  : "var(--cinza-100)",
+                borderColor: emailHover ? theme?.hexadecimal : "white",
+              }}
               href="/contato"
             >
-              Fale comigo
+              {lang === "pt-BR" ? "Fale comigo" : "Contact me"}
             </Link>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <BsWhatsapp className="text-4xl text-orange-600" />
+            <BsWhatsapp
+              className="text-4xl"
+              style={{ color: theme?.hexadecimal }}
+            />
             <p className="w-4/6 text-center opacity-50">
-              Me mande uma mensagem no whatsapp
+              {lang === "pt-BR"
+                ? "Me mande uma mensagem no whatsapp."
+                : "Send me a whatsapp message."}
             </p>
-            <div className="w-full h-10 flex justify-evenly items-center rounded-full bg-gray-900">
-              <BsEmojiLaughing />
+            <div className="w-full h-10 flex justify-evenly items-center rounded-full bg-gray-900 p-2">
+              <BsEmojiLaughing className="mr-2"/>
               <input
                 id="message"
                 type="text"
                 className="bg-gray-900 focus:border-none focus:outline-0"
+                placeholder={lang === "pt-BR" ? "Mensagem" : "Message"}
               />
               <button onClick={sendWhatsMessage}>
                 <AiFillRightCircle className="text-3xl text-green-300" />
@@ -84,10 +118,6 @@ export function ContactMe() {
           </div>
         </div>
       </div>
-     <p style={{color: theme?.hexadecimal}}>{theme?.hexadecimal}</p>
-     <button onClick={setYellow}>amarelo</button>
-     <br />
-     <button onClick={setOrange}>Laranja</button>
     </>
   );
 }

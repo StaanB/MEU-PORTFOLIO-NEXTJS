@@ -21,6 +21,7 @@ body {
   background: var(--cinza-600);
   color: #ffffff;
   overflow-x: hidden;
+  transition: all ease-in-out;
 }
 /* Definindo as fontes e o tamanho nos globais. */
 body,
@@ -91,7 +92,6 @@ a {
 
 .card:hover {
   scale: 1.1;
-  color: #ea580c;
 }
 
 .card svg {

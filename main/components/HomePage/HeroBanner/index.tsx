@@ -11,8 +11,10 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 export function HeroBanner() {
-  const [h1Clicked, setH1Clicked] = useState(false);
-  const { theme, setYellow } = useContext(ThemeContext);
+  // H1 clicado ou não
+  const [h1Hover, setH1Hover] = useState(false);
+  // Tema
+  const { theme } = useContext(ThemeContext);
 
   return (
     <>
@@ -41,9 +43,9 @@ export function HeroBanner() {
             initial="h1Fora"
             animate="h1EmTela"
             whileHover="h1Clicado"
-            onMouseEnter={() => setH1Clicked(true)}
-            onMouseLeave={() => setH1Clicked(false)}
-            style={{ color: h1Clicked ? theme?.hexadecimal : "white" }}
+            onMouseEnter={() => setH1Hover(true)}
+            onMouseLeave={() => setH1Hover(false)}
+            style={{ color: h1Hover ? theme?.hexadecimal : "white" }}
             className="text-4xl font-bold tracking-wideler cursor-pointer"
           >
             Stanley Brenner
