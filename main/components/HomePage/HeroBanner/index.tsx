@@ -14,7 +14,7 @@ export function HeroBanner() {
   // H1 clicado ou não
   const [h1Hover, setH1Hover] = useState(false);
   // Tema
-  const { theme } = useContext(ThemeContext);
+  const { theme, lang } = useContext(ThemeContext);
 
   return (
     <>
@@ -57,7 +57,9 @@ export function HeroBanner() {
             animate="pEmTela"
             className="text-sm mb-10"
           >
-            Desenvolvedor Front-End & Designer
+            {lang === "pt-BR"
+              ? "Desenvolvedor Front-End e Designer"
+              : "Front-end Developer & Designer"}
           </motion.p>
 
           <motion.ul

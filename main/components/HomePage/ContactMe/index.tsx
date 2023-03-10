@@ -15,6 +15,8 @@ import { AiFillMail, AiFillRightCircle } from "react-icons/ai";
 
 // Import mensagem para whatsapp
 import { sendWhatsMessage } from "./sendWhatsMessage";
+
+// Tema e idioma
 import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
@@ -104,7 +106,7 @@ export function ContactMe() {
                 : "Send me a whatsapp message."}
             </p>
             <div className="w-full h-10 flex justify-evenly items-center rounded-full bg-gray-900 p-2">
-              <BsEmojiLaughing className="mr-2"/>
+              <BsEmojiLaughing className="mr-2" />
               <input
                 id="message"
                 type="text"

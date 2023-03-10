@@ -9,9 +9,16 @@ import { ActiveLink } from "./ActiveLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 // Import React
-import { useState } from "react";
+import { useContext, useState } from "react";
+
+// Contexto do idioma
+import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 export const MobileNavBar = () => {
+  // Idioma
+  const { lang } = useContext(ThemeContext);
+  
+  // Mostrar a Nav no celular
   const [navMobile, setNavMobile] = useState(false);
 
   function showNavBar() {
@@ -49,11 +56,11 @@ export const MobileNavBar = () => {
               animate="NavInicioTela"
               whileHover="NavInicioHover"
             >
-              Inicio
+              {lang === "pt-BR" ? "Inicio" : "Home"}
             </motion.li>
           </ActiveLink>
 
-          <ActiveLink href="/sobre">
+          <ActiveLink href="/about">
             <motion.li
               id="sobre"
               variants={NavAnimations}
@@ -61,7 +68,7 @@ export const MobileNavBar = () => {
               animate="NavSobreTela"
               whileHover="NavSobreHover"
             >
-              Sobre
+              {lang === "pt-BR" ? "Sobre" : "About"}
             </motion.li>
           </ActiveLink>
 
@@ -71,7 +78,7 @@ export const MobileNavBar = () => {
             animate="NavHabilidadesTela"
             whileHover="NavHabilidadesHover"
           >
-            Habilidades
+            {lang === "pt-BR" ? "Habilidades" : "Skills"}
           </motion.li>
 
           <motion.li
@@ -80,7 +87,7 @@ export const MobileNavBar = () => {
             animate="NavProjetoTela"
             whileHover="NavProjetoHover"
           >
-            Projetos
+            {lang === "pt-BR" ? "Projetos" : "Projects"}
           </motion.li>
 
           <motion.li
@@ -89,7 +96,7 @@ export const MobileNavBar = () => {
             animate="NavContatoTela"
             whileHover="NavContatoHover"
           >
-            Contato
+            {lang === "pt-BR" ? "Contato" : "Contact"}
           </motion.li>
         </motion.ul>
       </nav>

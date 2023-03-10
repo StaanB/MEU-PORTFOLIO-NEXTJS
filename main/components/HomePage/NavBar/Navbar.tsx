@@ -1,7 +1,7 @@
 // Import Motion
 import { motion } from "framer-motion";
 
-// Import tema
+// Import tema e idioma
 import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
@@ -20,7 +20,7 @@ export function NavBar() {
   const [projetosHover, setProjetosHover] = useState(false);
   const [contatosHover, setContatosHover] = useState(false);
 
-  // Tema
+  // Tema e idioma
   const { theme, lang } = useContext(ThemeContext);
 
   return (
@@ -57,7 +57,7 @@ export function NavBar() {
             </motion.li>
           </ActiveLink>
 
-          <ActiveLink href="/sobre">
+          <ActiveLink href="/about">
             <motion.li
               id="sobre"
               variants={NavAnimations}

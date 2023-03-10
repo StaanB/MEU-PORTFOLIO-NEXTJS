@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { ProgressBar } from "./ProgressBar";
 
-// Tema
+// Tema e idioma
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 import { useContext } from "react";
 
 export function SkillsSection() {
-  // Tema
+  // Tema e idioma
   const { theme, lang } = useContext(ThemeContext);
 
   return (
@@ -47,7 +47,7 @@ export function SkillsSection() {
                 percent={80}
               />
 
-              <ProgressBar title="Photoshop" percent={55} />
+              <ProgressBar title="Photoshop" percent={60} />
             </div>
 
             <div className="w-full flex flex-col gap-5">

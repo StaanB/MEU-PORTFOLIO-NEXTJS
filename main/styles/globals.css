@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* Resets globais. */
 * {
   margin: 0;
@@ -46,20 +44,20 @@ a {
     display: none !important;
   }
 
-  .em-tela{
+  .em-tela {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media (max-width: 375px){
-  .card{
+@media (max-width: 375px) {
+  .card {
     width: 10rem !important;
   }
 }
 
 @media (max-width: 1000px) {
-  body{
+  body {
     overflow-x: auto;
   }
 }
@@ -75,7 +73,6 @@ a {
     url("../assets/background-main-page.jpg");
   background-size: cover;
 }
-
 
 .card {
   width: 6rem;
@@ -102,4 +99,29 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+.about-small-pictures {
+  width: 8rem;
+  height: 22rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  gap: 0.5rem;
+}
+
+.about-small-pictures span {
+  background-color: #111111;
+
+  justify-content: center;
+  font-weight: bold;
+  text-align: left;
+
+  padding: 0.6rem;
+  border-radius: 8px;
+
+  width: 9.6rem;
+  max-height: 16rem;
 }

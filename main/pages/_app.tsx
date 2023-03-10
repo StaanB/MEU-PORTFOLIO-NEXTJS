@@ -13,12 +13,12 @@ import { ColorsContainer } from "../components/HomePage/ThemeProvider/ColorsCont
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <AnimatePresence>
-      <ThemeProvider>
+    <ThemeProvider>
+      <AnimatePresence>
         <NavBar />
         <Component {...pageProps} key={router.pathname} />
         <ColorsContainer />
-      </ThemeProvider>
-    </AnimatePresence>
+      </AnimatePresence>
+    </ThemeProvider>
   );
 }

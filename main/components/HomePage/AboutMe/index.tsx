@@ -45,7 +45,6 @@ export function AboutMe() {
     <>
       <div className="max-[699px]:w-96 max-[699px]:ml-5 w-screen h-auto flex flex-col justify-center items-center">
         <motion.div
-          exit={{ y: "-100vw" }}
           className="max-[699px]:w-5/6 w-full flex flex-col justify-center items-center mb-10"
         >
           <BsInfoCircle
@@ -97,6 +96,7 @@ export function AboutMe() {
                   );
                 })}
               </div>
+
               <div>
                 {Object.values(
                   lang === "pt-BR" ? informationsBR : informationsEN
@@ -112,10 +112,12 @@ export function AboutMe() {
                 })}
               </div>
             </div>
+
             <p className="flex gap-32 items-center">
               <span className="font-bold" style={{ color: theme?.hexadecimal }}>
                 Status
               </span>{" "}
+              
               <span className="bg-green-900 p-1 font-bold rounded-md hover:bg-green-700 hover:scale-110 transition ease">
                 {lang === "pt-BR"
                   ? "Buscando vaga JR"
@@ -204,6 +206,7 @@ export function AboutMe() {
             </div>
           </div>
         </div>
+        {/* Lembrar de trocar currículos de acordo com a lingua */}
         <motion.a
           whileHover="ButtonAnimation"
           variants={CardsAnimation}

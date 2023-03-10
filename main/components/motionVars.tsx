@@ -1,5 +1,4 @@
 // Váriaveis da Navbar
-
 export const NavAnimations = {
   nomeLaranjaFora: {
     opacity: 0,
@@ -127,8 +126,6 @@ export const NavAnimations = {
   },
 };
 
-// Variáveis da página principal
-
 // Animaçõs dos temas de cores
 export const ColorsVars = {
   coresOcultas: {
@@ -226,7 +223,7 @@ export const ColorsVars = {
       delay: 1.3,
     },
   },
-  
+
   vermelhoFora: {
     opacity: 0,
     y: 1000,
@@ -242,11 +239,9 @@ export const ColorsVars = {
       delay: 1.7,
     },
   },
-  
 };
 
 // Animações do Herobanner
-
 export const HeroBannerVars = {
   containerOculto: {
     opacity: 0,
@@ -265,7 +260,7 @@ export const HeroBannerVars = {
   },
 
   containerSaindo: {
-    y: "-100vw",
+    opacity: 0,
   },
 
   fotoHover: {
@@ -326,7 +321,6 @@ export const HeroBannerVars = {
 };
 
 // Animações do About me
-
 export const CardsAnimation = {
   inView: {
     scale: [1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1],
@@ -341,4 +335,136 @@ export const CardsAnimation = {
       duration: 0.6,
     },
   },
+};
+
+export const AboutPageVars = {
+  guanabaraFora: {
+    opacity: 0,
+    x: -1000,
+  },
+
+  guanabaraEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+    },
+  },
+
+  attekitaFora: {
+    opacity: 0,
+    x: -1000,
+  },
+
+  attekitaEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.2
+    },
+  },
+
+  igorFora: {
+    opacity: 0,
+    x: -1000,
+  },
+
+  igorEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.4
+    },
+  },
+
+  diegoFora: {
+    opacity: 0,
+    x: -1000,
+  },
+
+  diegoEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.6
+    },
+  },
+
+  genshinFora: {
+    opacity: 0,
+    x: 1000,
+  },
+
+  genshinEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+    },
+  },
+
+  matrixFora: {
+    opacity: 0,
+    x: 1000,
+  },
+
+  matrixEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.2
+    },
+  },
+
+  jujutsuFora: {
+    opacity: 0,
+    x: 1000,
+  },
+
+  jujutsuEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.4
+    },
+  },
+
+  nirvanaFora: {
+    opacity: 0,
+    x: 1000,
+  },
+
+  nirvanaEmTela: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 110,
+      duration: 0.7,
+      delay: 0.6
+    },
+  },
+
+  imagemSaindo: {
+    opacity: 0
+  }
 };
