@@ -1,6 +1,6 @@
 // Import Motion e MotionVars
 import { motion } from "framer-motion";
-import { NavAnimations } from "../../motionVars";
+import { GlobalVars } from "../../motionVars";
 
 // Import Active Link
 import { ActiveLink } from "./ActiveLink";
@@ -17,7 +17,7 @@ import { ThemeContext } from "../ThemeProvider/ThemeContext";
 export const MobileNavBar = () => {
   // Idioma
   const { lang } = useContext(ThemeContext);
-  
+
   // Mostrar a Nav no celular
   const [navMobile, setNavMobile] = useState(false);
 
@@ -51,10 +51,10 @@ export const MobileNavBar = () => {
           <ActiveLink href="/">
             <motion.li
               id="inicio"
-              variants={NavAnimations}
-              initial="NavInicioFora"
-              animate="NavInicioTela"
-              whileHover="NavInicioHover"
+              variants={GlobalVars}
+              initial="elementoXFora2"
+              animate="elementoXEmTela"
+              whileHover="elementoHover2"
             >
               {lang === "pt-BR" ? "Inicio" : "Home"}
             </motion.li>
@@ -63,10 +63,10 @@ export const MobileNavBar = () => {
           <ActiveLink href="/about">
             <motion.li
               id="sobre"
-              variants={NavAnimations}
-              initial="NavSobreFora"
-              animate="NavSobreTela"
-              whileHover="NavSobreHover"
+              variants={GlobalVars}
+              initial="elementoXFora2"
+              animate="delayX2"
+              whileHover="elementoHover2"
             >
               {lang === "pt-BR" ? "Sobre" : "About"}
             </motion.li>
@@ -74,29 +74,31 @@ export const MobileNavBar = () => {
 
           <ActiveLink href="/skills">
             <motion.li
-              variants={NavAnimations}
-              initial="NavHabilidadesFora"
-              animate="NavHabilidadesTela"
-              whileHover="NavHabilidadesHover"
+              variants={GlobalVars}
+              initial="elementoXFora2"
+              animate="delayX4"
+              whileHover="elementoHover2"
             >
               {lang === "pt-BR" ? "Habilidades" : "Skills"}
             </motion.li>
           </ActiveLink>
 
-          <motion.li
-            variants={NavAnimations}
-            initial="NavProjetoFora"
-            animate="NavProjetoTela"
-            whileHover="NavProjetoHover"
-          >
-            {lang === "pt-BR" ? "Projetos" : "Projects"}
-          </motion.li>
+          <ActiveLink href="/projects">
+            <motion.li
+              variants={GlobalVars}
+              initial="elementoXFora2"
+              animate="delayX6"
+              whileHover="elementoHover2"
+            >
+              {lang === "pt-BR" ? "Projetos" : "Projects"}
+            </motion.li>
+          </ActiveLink>
 
           <motion.li
-            variants={NavAnimations}
-            initial="NavContatoFora"
-            animate="NavContatoTela"
-            whileHover="NavContatoHover"
+            variants={GlobalVars}
+            initial="elementoXFora2"
+            animate="delayX8"
+            whileHover="elementoHover2"
           >
             {lang === "pt-BR" ? "Contato" : "Contact"}
           </motion.li>

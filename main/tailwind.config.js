@@ -12,6 +12,7 @@ module.exports = {
     backgroundImage: {
       eu: 'url("../assets/me-profile.jpeg")',
       euAbout: 'url("../assets/eu-sobre.jpg")',
+      euProjects: 'url("../assets/github-image.jpg")',
       guanabara: 'url("../assets/guanabara.jpg")',
       attekita: 'url("../assets/attekita.jpg")',
       igor: 'url("../assets/igor.jpg")',

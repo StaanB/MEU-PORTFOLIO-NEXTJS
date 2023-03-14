@@ -43,7 +43,7 @@ export function MeDetailsBanner() {
             borderColor: theme?.hexadecimal,
             boxShadow: theme?.shadow,
           }}
-        ></motion.div>
+        />
 
         <div className="max-[699px]:flex-col w-full flex justify-between items-center gap-60">
           <motion.div

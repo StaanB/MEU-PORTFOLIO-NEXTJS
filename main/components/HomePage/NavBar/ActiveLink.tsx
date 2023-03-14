@@ -1,16 +1,20 @@
 // Import Link do Next
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // Import tema
-import { useContext } from "react";
+import { ReactNode, useContext } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
-interface NavLinkProps extends LinkProps {
-  children: React.ReactElement;
-}
-
-export const ActiveLink = ({ children, href, ...rest }) => {
+export const ActiveLink = ({
+  children,
+  href,
+  ...rest
+}: {
+  children: ReactNode;
+  href: string;
+  [rest: string]: ReactNode;
+}) => {
   // Tema
   const { theme } = useContext(ThemeContext);
 

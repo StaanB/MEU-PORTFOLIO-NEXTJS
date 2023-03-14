@@ -16,9 +16,12 @@ interface ThemeProps {
   setLangEN?: () => void;
 }
 
-export const ThemeContext = createContext<ThemeProps>({});
+export const ThemeContext = createContext<ThemeProps>({
+  theme: { hexadecimal: "", shadow: "" },
+  lang: "",
+});
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }: any) => {
   // Cor padrão do tema
   const [theme, setTheme] = useState({
     hexadecimal: "#EA580C",

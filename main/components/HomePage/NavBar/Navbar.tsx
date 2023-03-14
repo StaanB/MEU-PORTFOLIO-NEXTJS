@@ -86,17 +86,19 @@ export function NavBar() {
             </motion.li>
           </ActiveLink>
 
-          <motion.li
-            variants={GlobalVars}
-            initial="elementoXFora"
-            animate="delayX6"
-            whileHover="elementoHover2"
-            onMouseEnter={() => setProjetosHover(true)}
-            onMouseLeave={() => setProjetosHover(false)}
-            style={{ color: projetosHover ? theme?.hexadecimal : "white" }}
-          >
-            {lang === "pt-BR" ? "Projetos" : "Projects"}
-          </motion.li>
+          <ActiveLink href="/projects">
+            <motion.li
+              variants={GlobalVars}
+              initial="elementoXFora"
+              animate="delayX6"
+              whileHover="elementoHover2"
+              onMouseEnter={() => setProjetosHover(true)}
+              onMouseLeave={() => setProjetosHover(false)}
+              style={{ color: projetosHover ? theme?.hexadecimal : "white" }}
+            >
+              {lang === "pt-BR" ? "Projetos" : "Projects"}
+            </motion.li>
+          </ActiveLink>
 
           <motion.li
             variants={GlobalVars}
