@@ -1,5 +1,6 @@
-// Motion
+// Motion e Vars
 import { motion } from "framer-motion";
+import { GlobalVars } from "../../motionVars";
 
 // Icones
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -8,6 +9,7 @@ import { ProgressBar } from "./ProgressBar";
 // Tema e idioma
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 import { useContext } from "react";
+
 
 export function SkillsSection() {
   // Tema e idioma
@@ -22,8 +24,8 @@ export function SkillsSection() {
             style={{ color: theme?.hexadecimal }}
           />
           <motion.h2
-            whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
-            transition={{ duration: 5 }}
+            variants={GlobalVars}
+            whileInView="elementInView"
             className="mb-20 text-4xl font-bold underline"
             style={{ textDecorationColor: theme?.hexadecimal }}
           >

@@ -72,14 +72,16 @@ export const MobileNavBar = () => {
             </motion.li>
           </ActiveLink>
 
-          <motion.li
-            variants={NavAnimations}
-            initial="NavHabilidadesFora"
-            animate="NavHabilidadesTela"
-            whileHover="NavHabilidadesHover"
-          >
-            {lang === "pt-BR" ? "Habilidades" : "Skills"}
-          </motion.li>
+          <ActiveLink href="/skills">
+            <motion.li
+              variants={NavAnimations}
+              initial="NavHabilidadesFora"
+              animate="NavHabilidadesTela"
+              whileHover="NavHabilidadesHover"
+            >
+              {lang === "pt-BR" ? "Habilidades" : "Skills"}
+            </motion.li>
+          </ActiveLink>
 
           <motion.li
             variants={NavAnimations}

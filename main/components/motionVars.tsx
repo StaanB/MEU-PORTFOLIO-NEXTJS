@@ -1,470 +1,253 @@
-// Váriaveis da Navbar
-export const NavAnimations = {
-  nomeLaranjaFora: {
-    opacity: 0,
-    x: -200,
-  },
-
-  nomeLaranjaEmTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      damping: 8,
-      stiffness: 120,
-      duration: 1.4,
-    },
-  },
-
-  nomeLaranjaHover: {
-    scale: 1.1,
-  },
-
-  NavInicioFora: {
-    opacity: 0,
-    x: 200,
-  },
-
-  NavInicioTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 2,
-      delay: 0.1,
-    },
-  },
-
-  NavInicioHover: {
-    scale: 1.2,
-    originX: 0,
-  },
-
-  NavSobreFora: {
-    opacity: 0,
-    x: 200,
-  },
-
-  NavSobreTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 2,
-      delay: 0.3,
-    },
-  },
-
-  NavSobreHover: {
-    scale: 1.2,
-    originX: 0,
-  },
-
-  NavHabilidadesFora: {
-    opacity: 0,
-    x: 200,
-  },
-
-  NavHabilidadesTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 2,
-      delay: 0.5,
-    },
-  },
-
-  NavHabilidadesHover: {
-    scale: 1.2,
-    originX: 0,
-  },
-
-  NavProjetoFora: {
-    opacity: 0,
-    x: 200,
-  },
-
-  NavProjetoTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 2,
-      delay: 0.7,
-    },
-  },
-
-  NavProjetoHover: {
-    scale: 1.2,
-    originX: 0,
-  },
-
-  NavContatoFora: {
-    opacity: 0,
-    x: 200,
-  },
-
-  NavContatoTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 2,
-      delay: 0.9,
-    },
-  },
-
-  NavContatoHover: {
-    scale: 1.2,
-    originX: 0,
-  },
-};
-
-// Animaçõs dos temas de cores
-export const ColorsVars = {
-  coresOcultas: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  coresEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
-      delayChildren: 0.3,
-    },
-  },
-
-  bandeiraFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  bandeiraEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 0.5,
-    },
-  },
-
-  amareloFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  amareloEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 0.7,
-    },
-  },
-
-  verdeFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  verdeEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 0.9,
-    },
-  },
-
-  laranjaFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  laranjaEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 1.1,
-    },
-  },
-
-  azulFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  azulEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 1.3,
-    },
-  },
-
-  vermelhoFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  vermelhoEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 1.7,
-    },
-  },
-};
-
-// Animações do Herobanner
-export const HeroBannerVars = {
-  containerOculto: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  containerEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
-      delayChildren: 0.3,
-    },
-  },
-
-  containerSaindo: {
-    opacity: 0,
-  },
-
-  fotoHover: {
-    scale: 0.9,
-  },
-
-  h1Fora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  h1EmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 0.7,
-    },
-  },
-
-  h1Clicado: {
-    letterSpacing: "2px",
-  },
-
-  pFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  pEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 0.9,
-    },
-  },
-
-  ulFora: {
-    opacity: 0,
-    y: 1000,
-  },
-
-  ulEmTela: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 40,
-      duration: 0.7,
-      delay: 1.1,
-    },
-  },
-};
-
-// Animações do About me
-export const CardsAnimation = {
-  inView: {
-    scale: [1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1, 1.2, 1],
-    transition: {
-      duration: 5,
-    },
-  },
-
-  ButtonAnimation: {
+export const GlobalVars = {
+  buttonAnimation: {
     scale: 1.1,
     transition: {
       duration: 0.6,
     },
   },
-};
 
-export const AboutPageVars = {
-  guanabaraFora: {
-    opacity: 0,
-    x: -1000,
-  },
-
-  guanabaraEmTela: {
-    opacity: 1,
-    x: 0,
+  elementInView: {
+    scale: [1, 1.1, 1, 1.1, 1, 1.1, 1, 1.1, 1, 1.1, 1],
     transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
+      duration: 5,
     },
   },
 
-  attekitaFora: {
+  elementoHover: {
+    scale: 0.9,
+    originX: 0.1
+  },
+
+  elementoHover2: {
+    scale: 1.08,
+    originX: 0.3,
+  },
+
+  elementoSaindo: {
     opacity: 0,
-    x: -1000,
+    duration: 0.5,
   },
 
-  attekitaEmTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
-      delay: 0.2
-    },
+  textoHover: {
+    letterSpacing: "2px",
   },
 
-  igorFora: {
-    opacity: 0,
-    x: -1000,
-  },
-
-  igorEmTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
-      delay: 0.4
-    },
-  },
-
-  diegoFora: {
-    opacity: 0,
-    x: -1000,
-  },
-
-  diegoEmTela: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 110,
-      duration: 0.7,
-      delay: 0.6
-    },
-  },
-
-  genshinFora: {
+  // Elementos fora X
+  elementoXFora: {
     opacity: 0,
     x: 1000,
   },
 
-  genshinEmTela: {
+  elementoXEmTela: {
     opacity: 1,
     x: 0,
     transition: {
       type: "spring",
+      damping: 12,
       stiffness: 110,
-      duration: 0.7,
+      duration: 1,
     },
   },
 
-  matrixFora: {
+  elementoXFora2: {
     opacity: 0,
-    x: 1000,
+    x: -1000,
   },
 
-  matrixEmTela: {
+  delayX2: {
     opacity: 1,
     x: 0,
     transition: {
       type: "spring",
+      damping: 12,
       stiffness: 110,
-      duration: 0.7,
-      delay: 0.2
+      duration: 1,
+      delay: 0.2,
     },
   },
 
-  jujutsuFora: {
+  delayX4: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.4,
+    },
+  },
+
+  delayX6: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.6,
+    },
+  },
+
+  delayX8: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.8,
+    },
+  },
+
+  delayX10: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1,
+    },
+  },
+
+  // Elementos fora Y
+  elementoYFora: {
     opacity: 0,
-    x: 1000,
+    y: 1000,
   },
 
-  jujutsuEmTela: {
+  elementoYEmTela: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       type: "spring",
+      damping: 12,
       stiffness: 110,
-      duration: 0.7,
-      delay: 0.4
+      duration: 1,
     },
   },
 
-  nirvanaFora: {
-    opacity: 0,
-    x: 1000,
-  },
-
-  nirvanaEmTela: {
+  delayY2: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       type: "spring",
+      damping: 12,
       stiffness: 110,
-      duration: 0.7,
-      delay: 0.6
+      duration: 1,
+      delay: 0.2,
     },
   },
 
-  imagemSaindo: {
-    opacity: 0
-  }
+  delayY4: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.4,
+    },
+  },
+
+  delayY6: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.6,
+    },
+  },
+
+  delayY8: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 0.8,
+    },
+  },
+
+  delayY10: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1,
+    },
+  },
+
+  delayY12: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1.2,
+    },
+  },
+
+  delayY14: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1.4,
+    },
+  },
+
+  delayY16: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1.6,
+    },
+  },
+
+  delayY18: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 1.8,
+    },
+  },
+
+  delayY20: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 110,
+      duration: 1,
+      delay: 2,
+    },
+  },
 };

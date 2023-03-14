@@ -1,5 +1,6 @@
 // Import motion
 import { motion } from "framer-motion";
+import { GlobalVars } from "../../motionVars";
 
 // Import next link e imagens
 import Image from "next/image";
@@ -30,8 +31,8 @@ export function Habilities() {
             style={{ color: theme?.hexadecimal }}
           />
           <motion.h2
-            whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
-            transition={{ duration: 5 }}
+            variants={GlobalVars}
+            whileInView="elementInView"
             className="mb-20 text-4xl font-bold underline"
             style={{ textDecorationColor: theme?.hexadecimal }}
           >

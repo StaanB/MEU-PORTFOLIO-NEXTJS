@@ -1,6 +1,6 @@
 // Motion e Motion Vars
 import { motion } from "framer-motion";
-import { HeroBannerVars } from "../motionVars";
+import { GlobalVars } from "../motionVars";
 
 // Tema e língua
 import { useContext } from "react";
@@ -14,8 +14,12 @@ export function MeDetailsBanner() {
   const { theme, lang } = useContext(ThemeContext);
 
   return (
-    <div className="w-5/6 flex flex-col items-center justify-between gap-20 mb-10">
-      <motion.div exit={{ opacity: 0 }} className="flex flex-col items-center">
+    <div className="max-[699px]:w-96 w-5/6 flex flex-col items-center justify-between gap-20 mb-10">
+      <motion.div
+        variants={GlobalVars}
+        exit="elementoSaindo"
+        className="flex flex-col items-center"
+      >
         <BsInfoCircle
           className="w-8 h-8 mt-5 mb-3"
           style={{ color: theme?.hexadecimal }}
@@ -30,36 +34,35 @@ export function MeDetailsBanner() {
         </motion.h2>
 
         <motion.div
-          variants={HeroBannerVars}
-          exit={{ opacity: 0 }}
-          initial="containerOculto"
-          animate="containerEmTela"
-          whileHover="fotoHover"
-          className="bg-euAbout bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-4"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="elementoYEmTela"
+          whileHover="elementoHover"
+          className="max-[699px]:mb-16 bg-euAbout bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-4"
           style={{
             borderColor: theme?.hexadecimal,
             boxShadow: theme?.shadow,
           }}
         ></motion.div>
 
-        <div className="w-full flex justify-between items-center gap-60">
+        <div className="max-[699px]:flex-col w-full flex justify-between items-center gap-60">
           <motion.div
             exit={{ opacity: 0 }}
             className="w-4/6 flex flex-col items-center"
           >
             <motion.h1
-              variants={HeroBannerVars}
-              initial="h1Fora"
-              animate="h1EmTela"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY2"
               style={{ color: theme?.hexadecimal }}
               className="text-3xl mb-3 font-bold"
             >
               {lang === "pt-BR" ? "Eu e o HTML" : "Me and HTML"}
             </motion.h1>
             <motion.p
-              variants={HeroBannerVars}
-              initial="pFora"
-              animate="pEmTela"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY4"
               className="text-justify text-lg font-thin break-words"
             >
               {lang === "pt-BR"
@@ -77,18 +80,18 @@ export function MeDetailsBanner() {
             className="w-4/6 flex flex-col items-center"
           >
             <motion.h1
-              variants={HeroBannerVars}
-              initial="h1Fora"
-              animate="h1EmTela"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY2"
               style={{ color: theme?.hexadecimal }}
               className="text-3xl mb-3 font-bold"
             >
               {lang === "pt-BR" ? "Passatempos" : "Hobbies"}
             </motion.h1>
             <motion.p
-              variants={HeroBannerVars}
-              initial="pFora"
-              animate="pEmTela"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY4"
               className="text-justify text-lg font-thin"
             >
               {lang === "pt-BR"

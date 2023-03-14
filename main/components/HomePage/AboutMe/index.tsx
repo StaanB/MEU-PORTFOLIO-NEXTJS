@@ -7,7 +7,7 @@ import { BsInfoCircle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { CgGym } from "react-icons/cg";
 import { IoGameController } from "react-icons/io5";
 import { MdCoffee, MdLocalMovies } from "react-icons/md";
-import { CardsAnimation } from "../../motionVars";
+import { GlobalVars } from "../../motionVars";
 
 // Tema
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
@@ -44,17 +44,15 @@ export function AboutMe() {
   return (
     <>
       <div className="max-[699px]:w-96 max-[699px]:ml-5 w-screen h-auto flex flex-col justify-center items-center">
-        <motion.div
-          className="max-[699px]:w-5/6 w-full flex flex-col justify-center items-center mb-10"
-        >
+        <motion.div className="max-[699px]:w-5/6 w-full flex flex-col justify-center items-center mb-10">
           <BsInfoCircle
             className="w-8 h-8 mt-10 mb-3"
             style={{ color: theme?.hexadecimal }}
           />
 
           <motion.h2
-            whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
-            transition={{ duration: 5 }}
+            variants={GlobalVars}
+            whileInView="elementInView"
             className="mb-8 text-4xl font-bold underline"
             style={{ textDecorationColor: theme?.hexadecimal }}
           >
@@ -117,7 +115,6 @@ export function AboutMe() {
               <span className="font-bold" style={{ color: theme?.hexadecimal }}>
                 Status
               </span>{" "}
-              
               <span className="bg-green-900 p-1 font-bold rounded-md hover:bg-green-700 hover:scale-110 transition ease">
                 {lang === "pt-BR"
                   ? "Buscando vaga JR"
@@ -133,8 +130,8 @@ export function AboutMe() {
 
             <div className="max-[375px]:grid-cols-1 max-[1080px]:grid-cols-2 max-[1080px]:gap-24  grid grid-cols-3 gap-6">
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setJogosHover(true)}
                 onMouseLeave={() => setJogosHover(false)}
@@ -145,8 +142,8 @@ export function AboutMe() {
               </motion.div>
 
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setYoutubeHover(true)}
                 onMouseLeave={() => setYoutubeHover(false)}
@@ -157,8 +154,8 @@ export function AboutMe() {
               </motion.div>
 
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setFilmesHover(true)}
                 onMouseLeave={() => setFilmesHover(false)}
@@ -169,8 +166,8 @@ export function AboutMe() {
               </motion.div>
 
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setCafeHover(true)}
                 onMouseLeave={() => setCafeHover(false)}
@@ -181,8 +178,8 @@ export function AboutMe() {
               </motion.div>
 
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setMusicaHover(true)}
                 onMouseLeave={() => setMusicaHover(false)}
@@ -193,8 +190,8 @@ export function AboutMe() {
               </motion.div>
 
               <motion.div
-                variants={CardsAnimation}
-                whileInView="inView"
+                variants={GlobalVars}
+                whileInView="elementInView"
                 className="card"
                 onMouseEnter={() => setAcademiaHover(true)}
                 onMouseLeave={() => setAcademiaHover(false)}
@@ -208,8 +205,8 @@ export function AboutMe() {
         </div>
         {/* Lembrar de trocar currículos de acordo com a lingua */}
         <motion.a
-          whileHover="ButtonAnimation"
-          variants={CardsAnimation}
+          variants={GlobalVars}
+          whileHover="buttonAnimation"
           href="https://i.imgur.com/8gtkPc9.png"
           target="_blank"
           className="mt-20 mb-10 border px-4 py-2 flex gap-2 cursor-pointer rounded-md"

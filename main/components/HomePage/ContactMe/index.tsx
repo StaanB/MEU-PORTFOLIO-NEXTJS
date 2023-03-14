@@ -1,5 +1,6 @@
 // Import Motion
 import { motion } from "framer-motion";
+import { GlobalVars } from "../../motionVars";
 
 // Import next Link
 import Link from "next/link";
@@ -33,8 +34,8 @@ export function ContactMe() {
           style={{ color: theme?.hexadecimal }}
         />
         <motion.h2
-          whileInView={{ scale: [1, 1.1, 1, 1.1, 1] }}
-          transition={{ duration: 5 }}
+          variants={GlobalVars}
+          whileInView="elementInView"
           className="mb-20 text-4xl font-bold underline"
           style={{ textDecorationColor: theme?.hexadecimal }}
         >

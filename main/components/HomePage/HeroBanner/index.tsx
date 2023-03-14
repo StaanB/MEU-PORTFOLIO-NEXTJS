@@ -1,6 +1,6 @@
 // Motion e motion vars
 import { motion } from "framer-motion";
-import { HeroBannerVars } from "../../motionVars";
+import { GlobalVars } from "../../motionVars";
 
 // Next Link
 import Link from "next/link";
@@ -20,17 +20,17 @@ export function HeroBanner() {
     <>
       <motion.div className="max-[699px]:w-96 max-[699px]:ml-5 max-[699px]:w-96 background bg-cover w-screen h-fit flex justify-center items-center ">
         <motion.div
-          variants={HeroBannerVars}
-          initial="containerOculto"
-          animate="containerEmTela"
-          exit="containerSaindo"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="elementoYEmTela"
+          exit="elementoSaindo"
           className="w-30 h-auto bg-zinc-800 flex flex-col justify-center items-center mt-40 mb-20 m-auto rounded-md"
         >
           <motion.div
-            variants={HeroBannerVars}
-            initial="containerOculto"
-            animate="containerEmTela"
-            whileHover="fotoHover"
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="elementoYEmTela"
+            whileHover="elementoHover2"
             className="bg-eu bg-cover w-96 h-96 rounded-full relative bottom-10 border-solid border-8 "
             style={{
               borderColor: theme?.hexadecimal,
@@ -39,10 +39,10 @@ export function HeroBanner() {
           ></motion.div>
 
           <motion.h1
-            variants={HeroBannerVars}
-            initial="h1Fora"
-            animate="h1EmTela"
-            whileHover="h1Clicado"
+           variants={GlobalVars}
+           initial="elementoYFora"
+           animate="delayY2"
+            whileHover="textoHover"
             onMouseEnter={() => setH1Hover(true)}
             onMouseLeave={() => setH1Hover(false)}
             style={{ color: h1Hover ? theme?.hexadecimal : "white" }}
@@ -52,9 +52,9 @@ export function HeroBanner() {
           </motion.h1>
 
           <motion.p
-            variants={HeroBannerVars}
-            initial="pFora"
-            animate="pEmTela"
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY4"
             className="text-sm mb-10"
           >
             {lang === "pt-BR"
@@ -63,9 +63,9 @@ export function HeroBanner() {
           </motion.p>
 
           <motion.ul
-            variants={HeroBannerVars}
-            initial="ulFora"
-            animate="ulEmTela"
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY6"
             className="flex gap-7 mb-10"
           >
             <Link href="https://github.com/StaanB" target="_blank">

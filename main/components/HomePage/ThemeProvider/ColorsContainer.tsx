@@ -1,6 +1,6 @@
 // Motion e as Vars
 import { motion } from "framer-motion";
-import { ColorsVars } from "../../motionVars";
+import { GlobalVars } from "../../motionVars";
 
 // Mudar cores do tema
 import { useContext } from "react";
@@ -68,16 +68,16 @@ export const ColorsContainer = () => {
 
   return (
     <motion.div
-      variants={ColorsVars}
-      initial="coresOcultas"
-      animate="coresEmTela"
+      variants={GlobalVars}
+      initial="elementoYFora"
+      animate="elementoYEmTela"
       className="h-auto bg-black p-2 rounded-full flex flex-col gap-4 fixed  items-center bottom-1/2 left-2"
     >
       <div>
         <motion.div
-          variants={ColorsVars}
-          initial="bandeiraFora"
-          animate="bandeiraEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY2"
           className="w-[1.8rem] h-auto"
         >
           <Image
@@ -93,45 +93,45 @@ export const ColorsContainer = () => {
 
       <div className="flex flex-col gap-3 items-center justify-between">
         <motion.div
-          variants={ColorsVars}
-          initial="amareloFora"
-          animate="amareloEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY4"
           className="w-5 h-5 bg-[#EB9B17] rounded-full cursor-pointer"
           style={{ border: YellowActive() }}
           onClick={setYellow}
         ></motion.div>
 
         <motion.div
-          variants={ColorsVars}
-          initial="verdeFora"
-          animate="verdeEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY6"
           className="w-5 h-5 bg-[#189E4D] rounded-full cursor-pointer"
           style={{ border: GreenActive() }}
           onClick={setGreen}
         ></motion.div>
 
         <motion.div
-          variants={ColorsVars}
-          initial="laranjaFora"
-          animate="laranjaEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY6"
           className="w-5 h-5 bg-[#EA580C] rounded-full cursor-pointer"
           style={{ border: OrangeActive() }}
           onClick={setOrange}
         ></motion.div>
 
         <motion.div
-          variants={ColorsVars}
-          initial="azulFora"
-          animate="azulEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY8"
           className="w-5 h-5 bg-[#2389EB] rounded-full cursor-pointer"
           style={{ border: BlueActive() }}
           onClick={setBlue}
         ></motion.div>
 
         <motion.div
-          variants={ColorsVars}
-          initial="vermelhoFora"
-          animate="vermelhoEmTela"
+          variants={GlobalVars}
+          initial="elementoYFora"
+          animate="delayY10"
           className="w-5 h-5 bg-[#EB0E00] rounded-full cursor-pointer"
           style={{ border: RedActive() }}
           onClick={setRed}

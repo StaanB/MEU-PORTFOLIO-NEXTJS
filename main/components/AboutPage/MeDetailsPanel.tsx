@@ -1,6 +1,6 @@
 // Import motion e variaveis
 import { motion } from "framer-motion";
-import { AboutPageVars } from "../motionVars";
+import { GlobalVars } from "../motionVars";
 
 // Temas e idiomas
 import { useContext, useState } from "react";
@@ -24,16 +24,17 @@ export function MeDetailsPanel() {
   const [nirvanaClicked, setNirvanaClicked] = useState(false);
 
   return (
-    <div className="w-5/6 flex items-center justify-between gap-72">
+    <div className="max-[1500px]:gap-0 w-5/6 flex items-center justify-between gap-32">
       {/* Sessão de inspirações */}
       <div className="w-4/6 flex flex-col items-center">
-        <div className="w-full items-center flex justify-between gap-10">
+        <div className="max-[699px]:gap-0 max-[1080px]:flex-col w-full items-center flex justify-between gap-10">
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="guanabaraFora"
-              animate="guanabaraEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="elementoYEmTela"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 guanabaraClicked
                   ? () => {
@@ -71,10 +72,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="attekitaFora"
-              animate="attekitaEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY2"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 attekitaClicked
                   ? () => {
@@ -112,10 +114,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="igorFora"
-              animate="igorEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY4"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 igorClicked
                   ? () => {
@@ -153,10 +156,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="diegoFora"
-              animate="diegoEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY6"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 diegoClicked
                   ? () => {
@@ -196,13 +200,14 @@ export function MeDetailsPanel() {
 
       {/* Sessão de passatempos */}
       <div className="w-4/6 flex flex-col items-center">
-        <div className="w-full items-center flex justify-between gap-10">
+        <div className="max-[1080px]:gap-1 max-[1080px]:flex-col w-full items-center flex justify-between gap-10">
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="genshinFora"
-              animate="genshinEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY6"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 genshinClicked
                   ? () => {
@@ -232,10 +237,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="matrixFora"
-              animate="matrixEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY4"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 matrixClicked
                   ? () => {
@@ -265,10 +271,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="jujutsuFora"
-              animate="jujutsuEmTela"
-              exit="imagemSaindo"
+              variants={GlobalVars}
+              initial="elementoYFora"
+              animate="delayY2"
+              whileHover="elementoHover2"
+              exit="elementoSaindo"
               onClick={
                 jujutsuClicked
                   ? () => {
@@ -298,10 +305,11 @@ export function MeDetailsPanel() {
 
           <div className="about-small-pictures">
             <motion.div
-              variants={AboutPageVars}
-              initial="nirvanaFora"
-              animate="nirvanaEmTela"
-              exit="imagemSaindo"
+             variants={GlobalVars}
+             initial="elementoYFora"
+             animate="elementoYEmTela"
+             whileHover="elementoHover2"
+             exit="elementoSaindo"
               onClick={
                 nirvanaClicked
                   ? () => {
