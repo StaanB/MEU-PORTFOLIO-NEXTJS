@@ -71,7 +71,7 @@ a {
 
 /* Mudanças específicas no CSS */
 
-body {
+.background {
   background-image: linear-gradient(
       to top,
       rgba(17, 17, 17, 0.1),
