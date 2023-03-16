@@ -33,7 +33,7 @@ export function NavBar() {
           whileHover="elementoHover2"
           drag
           dragConstraints={{ left: 0, top: 0, bottom: 0, right: 0 }}
-          className="text-2xl ml-9 font-bold tracking-wider cursor-pointer"
+          className="text-2xl ml-9 font-bold tracking-wider cursor-pointer z-10"
           style={{ color: theme?.hexadecimal }}
         >
           Stanley
