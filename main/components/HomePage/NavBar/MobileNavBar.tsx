@@ -94,14 +94,16 @@ export const MobileNavBar = () => {
             </motion.li>
           </ActiveLink>
 
-          <motion.li
-            variants={GlobalVars}
-            initial="elementoXFora2"
-            animate="delayX8"
-            whileHover="elementoHover2"
-          >
-            {lang === "pt-BR" ? "Contato" : "Contact"}
-          </motion.li>
+          <ActiveLink href="/contact">
+            <motion.li
+              variants={GlobalVars}
+              initial="elementoXFora2"
+              animate="delayX8"
+              whileHover="elementoHover2"
+            >
+              {lang === "pt-BR" ? "Contato" : "Contact"}
+            </motion.li>
+          </ActiveLink>
         </motion.ul>
       </nav>
     </>

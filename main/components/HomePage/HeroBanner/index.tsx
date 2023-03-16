@@ -62,13 +62,13 @@ export function HeroBanner() {
               : "Front-end Developer & Designer"}
           </motion.p>
 
-          <motion.ul
+          <motion.div
             variants={GlobalVars}
             initial="elementoYFora"
             animate="delayY6"
             className="flex gap-7 mb-10"
           >
-            <Link href="https://github.com/StaanB" target="_blank">
+            <Link href="https://github.com/StaanB" target="_blank" id="github_link">
               <BsGithub className="w-6 h-6 hover:text-black hover:scale-125 ease-in duration-200 cursor-pointer" />
             </Link>
 
@@ -86,7 +86,7 @@ export function HeroBanner() {
             <Link href="https://wa.me/+5571986895914" target="_blank">
               <BsWhatsapp className="w-6 h-6 hover:text-green-600 hover:scale-125 ease-in duration-200 cursor-pointer" />
             </Link>
-          </motion.ul>
+          </motion.div>
         </motion.div>
       </motion.div>
     </>

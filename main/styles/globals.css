@@ -128,3 +128,7 @@ a {
   width: 9.6rem;
   max-height: 16rem;
 }
+
+.vazio{
+  border: 2px solid #dc2626;
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@next/font": "13.2.3",
     "@types/node": "18.14.4",
     "@types/react": "18.0.28",
@@ -23,7 +24,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "cypress": "^12.7.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }

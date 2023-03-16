@@ -100,17 +100,19 @@ export function NavBar() {
             </motion.li>
           </ActiveLink>
 
-          <motion.li
-            variants={GlobalVars}
-            initial="elementoXFora"
-            animate="delayX8"
-            whileHover="elementoHover2"
-            onMouseEnter={() => setContatosHover(true)}
-            onMouseLeave={() => setContatosHover(false)}
-            style={{ color: contatosHover ? theme?.hexadecimal : "white" }}
-          >
-            {lang === "pt-BR" ? "Contato" : "Contact"}
-          </motion.li>
+          <ActiveLink href="/contact">
+            <motion.li
+              variants={GlobalVars}
+              initial="elementoXFora"
+              animate="delayX8"
+              whileHover="elementoHover2"
+              onMouseEnter={() => setContatosHover(true)}
+              onMouseLeave={() => setContatosHover(false)}
+              style={{ color: contatosHover ? theme?.hexadecimal : "white" }}
+            >
+              {lang === "pt-BR" ? "Contato" : "Contact"}
+            </motion.li>
+          </ActiveLink>
         </ul>
       </nav>
     </>

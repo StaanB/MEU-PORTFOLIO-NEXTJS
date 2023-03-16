@@ -90,7 +90,7 @@ export function ContactMe() {
                   : "var(--cinza-100)",
                 borderColor: emailHover ? theme?.hexadecimal : "white",
               }}
-              href="/contato"
+              href="/contact"
             >
               {lang === "pt-BR" ? "Fale comigo" : "Contact me"}
             </Link>
@@ -111,6 +111,7 @@ export function ContactMe() {
               <input
                 id="message"
                 type="text"
+                autoComplete="off"
                 className="bg-gray-900 focus:border-none focus:outline-0"
                 placeholder={lang === "pt-BR" ? "Mensagem" : "Message"}
               />

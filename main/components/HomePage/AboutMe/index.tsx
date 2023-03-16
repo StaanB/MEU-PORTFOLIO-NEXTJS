@@ -203,11 +203,11 @@ export function AboutMe() {
             </div>
           </div>
         </div>
-        {/* Lembrar de trocar currículos de acordo com a lingua */}
+        {/* PT-BR https://imgur.com/a/c1EDRfs  EN-EU https://imgur.com/a/0GSIlfh*/}
         <motion.a
           variants={GlobalVars}
           whileHover="buttonAnimation"
-          href="https://i.imgur.com/8gtkPc9.png"
+          href={lang === "pt-BR" ? "https://imgur.com/a/c1EDRfs" : "https://imgur.com/a/0GSIlfh"}
           target="_blank"
           className="mt-20 mb-10 border px-4 py-2 flex gap-2 cursor-pointer rounded-md"
           onMouseEnter={() => setCurriculoHover(true)}
