@@ -35,7 +35,7 @@ export function MeDetailsPanel() {
   const [nirvanaClicked, setNirvanaClicked] = useState(false);
 
   return (
-    <div className="max-[1500px]:gap-0 max-[699px]:ml-7 w-5/6 flex items-center justify-between gap-32 z-10">
+    <div className="max-[1500px]:gap-0 max-[699px]:ml-7 w-5/6 flex items-center justify-between gap-36 z-10">
       {/* Sessão de inspirações */}
       <div className="w-4/6 flex flex-col items-center">
         <div className="max-[699px]:gap-0 max-[1080px]:flex-col w-full items-center flex justify-between gap-10 mb-5">
