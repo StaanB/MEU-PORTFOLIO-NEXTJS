@@ -4,7 +4,7 @@ import { MeDetailsPanel } from "./MeDetailsPanel";
 
 export function MeDetails() {
   return (
-    <div className="background bg-cover w-screen h-fit flex flex-col justify-between items-center ">
+    <div className="max-[699px]:w-96 background bg-cover w-screen h-fit flex flex-col justify-between items-center ">
       <MeDetailsBanner />
 
       <MeDetailsPanel />

@@ -14,7 +14,7 @@ export function MeDetailsBanner() {
   const { theme, lang } = useContext(ThemeContext);
 
   return (
-    <div className="max-[699px]:w-96 w-5/6 flex flex-col items-center justify-between gap-20 mb-10">
+    <div className="max-[699px]:w-96 max-[699px]:ml-14 w-5/6 flex flex-col items-center justify-between gap-20 mb-10">
       <motion.div
         variants={GlobalVars}
         exit="elementoSaindo"

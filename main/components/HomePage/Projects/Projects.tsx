@@ -74,8 +74,8 @@ export function Habilities() {
               />
               <p className="font-bold text-md mb-2 w-5/6 text-center">
                 {lang === "pt-BR"
-                  ? "Site do motogrupo Legião Sem Fronteiras."
-                  : "Legion motorcycle group website."}
+                  ? "Site do motoclube Legião Sem Fronteiras."
+                  : "Legion motorcycle club website."}
               </p>
               <Link
                 className="uppercase font-bold bg-[#111111] p-3 rounded-full flex items-center gap-2 hover:bg-black transition-all ease-in-out"

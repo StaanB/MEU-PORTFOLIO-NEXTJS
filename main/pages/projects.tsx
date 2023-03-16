@@ -74,7 +74,7 @@ export default function Projects() {
               variants={GlobalVars}
               initial="elementoYFora"
               animate="delayY4"
-              className="w-3/6 ml-5 leading-6 text-left"
+              className="w-5/6 ml-5 leading-6 text-left"
             >
               {lang === "pt-BR"
                 ? "Para ver meus projetos você poderia acessar meu GitHub, mas porque esse trabalho? Então eu trouxe o Github para cá. Pode clicar em algum repositório e vai direto para o repositório escolhido."

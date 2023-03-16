@@ -29,7 +29,7 @@ export function AboutMe() {
     "Data de nascimento": "08-12-2000",
     Celular: "+55 (71) 9 8689-5914",
     Email: "stanleybrenner@gmail.com",
-    Site: "www.esse.site.com",
+    Site: "https://meu-portfolio-next-js.vercel.app/",
     Endereço: "Salvador-BA",
   };
 
@@ -37,7 +37,7 @@ export function AboutMe() {
     Birthdate: "08-12-2000",
     Phone: "+55 71986895914",
     Email: "stanleybrenner@gmail.com",
-    Website: "www.esse.site.com",
+    Website: "https://meu-portfolio-next-js.vercel.app/",
     Addres: "Brazil Salvador-BA",
   };
 
@@ -117,8 +117,8 @@ export function AboutMe() {
               </span>{" "}
               <span className="bg-green-900 p-1 font-bold rounded-md hover:bg-green-700 hover:scale-110 transition ease">
                 {lang === "pt-BR"
-                  ? "Buscando vaga JR"
-                  : "Looking for dev JR job"}
+                  ? "Buscando vaga"
+                  : "Looking for dev job"}
               </span>
             </p>
           </div>
