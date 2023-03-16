@@ -19,7 +19,7 @@ export function MySkills() {
       <motion.div
         variants={GlobalVars}
         exit="elementoSaindo"
-        className="max-[699px]:w-96 w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10"
+        className="max-[699px]:w-96 max-[699px]:ml-5 w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10"
       >
         <div className="max-[699px]:ml-12 flex flex-col items-center">
           <BsFillPersonLinesFill
