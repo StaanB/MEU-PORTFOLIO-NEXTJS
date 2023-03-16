@@ -10,6 +10,9 @@ import { BsGithub, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
+import Image from "next/image";
+import euHeroBanner from "../../../assets/me-profile.jpeg";
+
 export function HeroBanner() {
   // H1 clicado ou não
   const [h1Hover, setH1Hover] = useState(false);
@@ -18,7 +21,9 @@ export function HeroBanner() {
 
   return (
     <>
-      <motion.div className="max-[699px]:w-96 max-[699px]:ml-5 max-[699px]:w-96 background bg-cover w-screen h-fit flex justify-center items-center ">
+      <motion.div className="max-[699px]:w-96 max-[699px]:ml-5 max-[699px]:w-96 bg-cover w-screen h-fit flex justify-center items-center ">
+        
+
         <motion.div
           variants={GlobalVars}
           initial="elementoYFora"
@@ -26,22 +31,24 @@ export function HeroBanner() {
           exit="elementoSaindo"
           className="w-30 h-auto bg-zinc-800 flex flex-col justify-center items-center mt-40 mb-20 m-auto rounded-md"
         >
-          <motion.div
-            variants={GlobalVars}
-            initial="elementoYFora"
-            animate="elementoYEmTela"
-            whileHover="elementoHover2"
-            className="bg-eu bg-cover w-96 h-96 rounded-full relative bottom-10 border-solid border-8 "
+          <Image
+            className="bg-cover w-96 h-96 rounded-full relative bottom-10 border-solid border-8 hover:scale-110 transition-all ease-in-out"
+            src={euHeroBanner}
+            width={300}
+            height={300}
+            placeholder="blur"
+            alt="foto do legião"
             style={{
+              objectFit: "cover",
               borderColor: theme?.hexadecimal,
               boxShadow: theme?.shadow,
             }}
-          ></motion.div>
+          />
 
           <motion.h1
-           variants={GlobalVars}
-           initial="elementoYFora"
-           animate="delayY2"
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY2"
             whileHover="textoHover"
             onMouseEnter={() => setH1Hover(true)}
             onMouseLeave={() => setH1Hover(false)}
@@ -68,7 +75,11 @@ export function HeroBanner() {
             animate="delayY6"
             className="flex gap-7 mb-10"
           >
-            <Link href="https://github.com/StaanB" target="_blank" id="github_link">
+            <Link
+              href="https://github.com/StaanB"
+              target="_blank"
+              id="github_link"
+            >
               <BsGithub className="w-6 h-6 hover:text-black hover:scale-125 ease-in duration-200 cursor-pointer" />
             </Link>
 
