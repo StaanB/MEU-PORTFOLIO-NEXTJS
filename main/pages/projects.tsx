@@ -24,7 +24,7 @@ export default function Projects() {
         </title>
       </Head>
       
-      <div className="w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10">
+      <div className="max-[699px]:w-96 w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10">
         <motion.div
           variants={GlobalVars}
           exit="elementoSaindo"
