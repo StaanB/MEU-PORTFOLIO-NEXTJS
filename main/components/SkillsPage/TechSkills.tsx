@@ -26,7 +26,7 @@ export function TechSkills() {
   const { lang, theme } = useContext(ThemeContext);
   return (
     <>
-      <div className="max-[1080px]:grid-cols-1 max-[1500px]:grid-cols-2 max-[699px]:w-96 w-4/6 h-full grid grid-cols-3 ml-36">
+      <div className="max-[1080px]:grid-cols-1 max-[1500px]:grid-cols-2 max-[699px]:w-96 w-4/6 h-full grid grid-cols-3 ml-36 z-10">
         <motion.div
           variants={GlobalVars}
           initial="elementoYFora"

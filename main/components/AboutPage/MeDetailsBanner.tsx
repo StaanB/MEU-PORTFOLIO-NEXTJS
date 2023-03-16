@@ -9,12 +9,15 @@ import { ThemeContext } from "../HomePage/ThemeProvider/ThemeContext";
 // Icone
 import { BsInfoCircle } from "react-icons/bs";
 
+import Image from "next/image";
+import euAbout from "../../assets/eu-sobre.jpg";
+
 export function MeDetailsBanner() {
   // Tema e língua
   const { theme, lang } = useContext(ThemeContext);
 
   return (
-    <div className="max-[699px]:w-96 max-[699px]:ml-14 w-5/6 flex flex-col items-center justify-between gap-20 mb-10">
+    <div className="max-[699px]:w-96 max-[699px]:ml-14 w-5/6 flex flex-col items-center justify-between gap-20 mb-10 z-10">
       <motion.div
         variants={GlobalVars}
         exit="elementoSaindo"
@@ -37,13 +40,19 @@ export function MeDetailsBanner() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="elementoYEmTela"
-          whileHover="elementoHover"
-          className="max-[699px]:mb-16 bg-euAbout bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-4"
-          style={{
-            borderColor: theme?.hexadecimal,
-            boxShadow: theme?.shadow,
-          }}
-        />
+        >
+          <Image
+            className="max-[699px]:mb-16 bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-4 hover:scale-110 transition-all ease-in-out"
+            src={euAbout}
+            priority
+            placeholder="blur"
+            alt="Eu Sobre"
+            style={{
+              borderColor: theme?.hexadecimal,
+              boxShadow: theme?.shadow,
+            }}
+          />
+        </motion.div>
 
         <div className="max-[699px]:flex-col w-full flex justify-between items-center gap-60">
           <motion.div

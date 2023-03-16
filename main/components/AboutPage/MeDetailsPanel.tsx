@@ -6,6 +6,17 @@ import { GlobalVars } from "../motionVars";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../HomePage/ThemeProvider/ThemeContext";
 
+// Fotos
+import Image from "next/image";
+import Guanabara from "../../assets/guanabara.jpg";
+import Attekita from "../../assets/attekita.jpg";
+import Igor from "../../assets/igor.jpg";
+import Diego from "../../assets/diego.png";
+import Genshin from "../../assets/genshin.webp";
+import Matrix from "../../assets/matrix.jpg";
+import Jujutsu from "../../assets/jujutsu.png";
+import Nirvana from "../../assets/nirvana.jpg";
+
 export function MeDetailsPanel() {
   // Tema e idioma
   const { theme, lang } = useContext(ThemeContext);
@@ -24,17 +35,22 @@ export function MeDetailsPanel() {
   const [nirvanaClicked, setNirvanaClicked] = useState(false);
 
   return (
-    <div className="max-[1500px]:gap-0 max-[699px]:ml-7 w-5/6 flex items-center justify-between gap-32">
+    <div className="max-[1500px]:gap-0 max-[699px]:ml-7 w-5/6 flex items-center justify-between gap-32 z-10">
       {/* Sessão de inspirações */}
       <div className="w-4/6 flex flex-col items-center">
         <div className="max-[699px]:gap-0 max-[1080px]:flex-col w-full items-center flex justify-between gap-10 mb-5">
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="elementoYEmTela"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="elementoYEmTela"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Guanabara}
+              priority
+              placeholder="blur"
+              alt="Guanabara"
               onClick={
                 guanabaraClicked
                   ? () => {
@@ -48,7 +64,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-guanabara bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -68,15 +84,20 @@ export function MeDetailsPanel() {
               </a>
               .
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY2"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY2"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Attekita}
+              priority
+              placeholder="blur"
+              alt="Attekita"
               onClick={
                 attekitaClicked
                   ? () => {
@@ -90,7 +111,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-attekita bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -110,15 +131,20 @@ export function MeDetailsPanel() {
               </a>
               .
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY4"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY4"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Igor}
+              priority
+              placeholder="blur"
+              alt="Igor"
               onClick={
                 igorClicked
                   ? () => {
@@ -132,7 +158,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-igor bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -152,15 +178,20 @@ export function MeDetailsPanel() {
               </a>
               .
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY6"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY6"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Diego}
+              priority
+              placeholder="blur"
+              alt="Diego Rocketseat"
               onClick={
                 diegoClicked
                   ? () => {
@@ -174,7 +205,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-diego bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -194,20 +225,25 @@ export function MeDetailsPanel() {
               </a>
               .
             </motion.span>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Sessão de passatempos */}
       <div className="w-4/6 flex flex-col items-center">
         <div className="max-[1080px]:gap-1 max-[1080px]:flex-col w-full items-center flex justify-between gap-10">
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY6"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY6"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Genshin}
+              priority
+              placeholder="blur"
+              alt="Genshin Impact Logo"
               onClick={
                 genshinClicked
                   ? () => {
@@ -221,7 +257,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-genshin bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -233,15 +269,20 @@ export function MeDetailsPanel() {
                 ? "Além de Genshin Impact jogo alguns outros jogos como Brawlhalla, Osu e alguns outros. Vamos jogar!!"
                 : "Besides Genshin Impact I play some other games like Brawlhalla, Osu and some others. Let's Play!!"}
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY4"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY4"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Matrix}
+              priority
+              placeholder="blur"
+              alt="Matrix Movie"
               onClick={
                 matrixClicked
                   ? () => {
@@ -255,7 +296,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-matrix bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -267,15 +308,20 @@ export function MeDetailsPanel() {
                 ? "Vejo filmes quando tenho tempo, Matrix, Vingadores, Poderoso chefão são os meus favoritos."
                 : "I watch movies when I have time, The Matrix, Avengers, Godfather are my favorites."}
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-              variants={GlobalVars}
-              initial="elementoYFora"
-              animate="delayY2"
-              whileHover="elementoHover2"
-              exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="delayY2"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Jujutsu}
+              priority
+              placeholder="blur"
+              alt="Jujutsu Kaisen anime"
               onClick={
                 jujutsuClicked
                   ? () => {
@@ -289,7 +335,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-jujutsu bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -301,15 +347,20 @@ export function MeDetailsPanel() {
                 ? "Jujutsu, Hunter x Hunter, Kimetsu no Yaiba são apenas alguns dos meus animes favoritos."
                 : "Jujutsu, Hunter x Hunter, Kimetsu no Yaiba are just some of my favorite animes."}
             </motion.span>
-          </div>
+          </motion.div>
 
-          <div className="about-small-pictures">
-            <motion.div
-             variants={GlobalVars}
-             initial="elementoYFora"
-             animate="elementoYEmTela"
-             whileHover="elementoHover2"
-             exit="elementoSaindo"
+          <motion.div
+            variants={GlobalVars}
+            initial="elementoYFora"
+            animate="elementoYEmTela"
+            exit="elementoSaindo"
+            className="about-small-pictures"
+          >
+            <Image
+              src={Nirvana}
+              priority
+              placeholder="blur"
+              alt="Nirvana band"
               onClick={
                 nirvanaClicked
                   ? () => {
@@ -323,7 +374,7 @@ export function MeDetailsPanel() {
                 borderColor: theme?.hexadecimal,
                 boxShadow: theme?.shadow,
               }}
-              className="bg-nirvana bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer"
+              className="bg-cover bg-no-repeat w-24 h-24 rounded-full border-solid border-4 cursor-pointer hover:scale-110 transition-all ease-in-out"
             />
             <motion.span
               initial={{ opacity: 0 }}
@@ -335,7 +386,7 @@ export function MeDetailsPanel() {
                 ? "Nirvana = minha banda favorita, mas gosto de Harry Styles, The Weekend, Joji, Artic Monkeys..."
                 : "Nirvana = my favorite band, but I like Harry Styles, The Weekend, Joji, Arctic Monkeys..."}
             </motion.span>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

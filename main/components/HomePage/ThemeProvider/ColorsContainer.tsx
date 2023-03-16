@@ -71,7 +71,7 @@ export const ColorsContainer = () => {
       variants={GlobalVars}
       initial="elementoYFora"
       animate="elementoYEmTela"
-      className="max-[1000px]:bottom-10 h-auto bg-black p-2 rounded-full flex flex-col gap-4 fixed  items-center bottom-1/2 left-2"
+      className="max-[1000px]:bottom-10 h-auto bg-black p-2 rounded-full flex flex-col gap-4 fixed  items-center bottom-1/2 left-2 z-20"
     >
       <div>
         <motion.div

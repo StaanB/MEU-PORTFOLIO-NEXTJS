@@ -25,7 +25,7 @@ export function NavBar() {
 
   return (
     <>
-      <nav className="max-[699px]:w-96 max-[699px]:m-3 w-auto h-12 flex justify-between items-center mb-4">
+      <nav className="max-[699px]:w-96 max-[699px]:m-3 w-auto h-12 flex justify-between items-center mb-4 font-bold">
         <motion.p
           variants={GlobalVars}
           initial="elementoXFora2"

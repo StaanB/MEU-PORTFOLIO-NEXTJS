@@ -15,7 +15,7 @@ export function SocialMedias() {
   // Idioma e tema
   const { lang, theme } = useContext(ThemeContext);
   return (
-    <div className="w-5/6 mb-10 flex flex-col items-center justify-center">
+    <div className="w-5/6 mb-10 flex flex-col items-center justify-center z-10">
       <motion.h2
         variants={GlobalVars}
         initial="elementoYFora"

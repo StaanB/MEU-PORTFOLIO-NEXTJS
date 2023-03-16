@@ -25,7 +25,7 @@ export function ContactEmail() {
         variants={GlobalVars}
         initial="elementoYFora"
         animate="elementoYEmTela"
-        className="flex flex-col items-center"
+        className="flex flex-col items-center z-10"
       >
         <AiFillMail
           className="w-8 h-8 mt-10 mb-3"
@@ -47,7 +47,7 @@ export function ContactEmail() {
         </motion.p>
       </motion.div>
 
-      <div className="max-[699px]:flex-col w-5/6 mb-10 flex items-center justify-around">
+      <div className="max-[699px]:flex-col w-5/6 mb-10 flex items-center justify-around z-10">
         <motion.div
           variants={GlobalVars}
           initial="elementoYFora"

@@ -19,9 +19,9 @@ export function MySkills() {
       <motion.div
         variants={GlobalVars}
         exit="elementoSaindo"
-        className="max-[699px]:w-96 max-[699px]:ml-5 w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10"
+        className="max-[699px]:w-96 max-[699px]:ml-5 w-screen bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10"
       >
-        <div className="max-[699px]:ml-12 flex flex-col items-center">
+        <div className="max-[699px]:ml-12 flex flex-col items-center z-10">
           <BsFillPersonLinesFill
             className="w-8 h-8 mt-10 mb-3"
             style={{ color: theme?.hexadecimal }}

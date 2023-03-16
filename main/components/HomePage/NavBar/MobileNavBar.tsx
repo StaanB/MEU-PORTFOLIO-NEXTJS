@@ -39,7 +39,7 @@ export const MobileNavBar = () => {
     <>
       <button
         onClick={showNavBar}
-        className="min-[700px]:hidden absolute left-[95%] top-[3%]"
+        className="min-[700px]:hidden absolute left-[95%] top-[3%] z-10"
       >
         <GiHamburgerMenu className="text-3xl" />
       </button>

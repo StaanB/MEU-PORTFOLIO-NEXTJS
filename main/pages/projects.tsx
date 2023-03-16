@@ -11,7 +11,14 @@ import { BsBriefcaseFill } from "react-icons/bs";
 
 // Componentes
 import { GithubRepos } from "../components/ProjectsPage/GithubRepos";
+
+// Next
 import Head from "next/head";
+import Image from "next/image";
+
+// Imagens
+import euProjects from "../assets/github-image.jpg"
+import background from "../assets/background-main-page.jpg";
 
 export default function Projects() {
   // Idioma e tema
@@ -23,12 +30,12 @@ export default function Projects() {
           {lang === "pt-BR" ? "Stanley | Projetos" : "Stanley | Projects"}
         </title>
       </Head>
-      
-      <div className="max-[699px]:w-96 w-screen background bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10">
+
+      <div className="max-[699px]:w-96 w-screen bg-cover w-screen h-fit flex flex-col justify-between items-center gap-10">
         <motion.div
           variants={GlobalVars}
           exit="elementoSaindo"
-          className="max-[1080px]:ml-12 flex flex-col items-center"
+          className="max-[1080px]:ml-12 flex flex-col items-center z-10"
         >
           <BsBriefcaseFill
             className="w-8 h-8 mt-10 mb-3"
@@ -47,16 +54,22 @@ export default function Projects() {
         <motion.div
           variants={GlobalVars}
           exit="elementoSaindo"
-          className="max-[1080px]:flex-col w-5/6 mb-20 flex justify-left bg-[#111111] p-2 rounded-md"
+          className="max-[1080px]:flex-col w-5/6 mb-20 flex justify-left bg-[#111111] p-2 rounded-md z-10"
         >
           <div className="max-[1080px]:w-full ml-2 w-2/6">
             <motion.div
               variants={GlobalVars}
               initial="elementoYFora"
               animate="elementoYEmTela"
-              className="max-[699px]:w-60 max-[699px]:h-60 max-[699px]:mb-16 bg-euProjects bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-2 border-gray-800"
             >
-              <span className="max-[699px]:top-40 max-[699px]:left-52 relative left-56 top-60 bg-[#111111] p-2 rounded-full border-solid border-2 border-gray-800">
+              <Image
+                src={euProjects}
+                priority
+                placeholder="blur"
+                alt="Eu Sobre"
+                className="max-[699px]:w-60 max-[699px]:h-60 bg-euProjects bg-cover bg-no-repeat w-72 h-72 rounded-full border-solid border-2 border-gray-800"
+              />
+              <span className="max-[699px]:bottom-34 max-[699px]:left-48 relative left-56 bottom-10 bg-[#111111] p-2 rounded-full border-solid border-2 border-gray-800">
                 ☕
               </span>
             </motion.div>
@@ -85,6 +98,16 @@ export default function Projects() {
           <GithubRepos />
         </motion.div>
       </div>
+      <Image
+        className="w-screen top-16 max-[1040px]:h-[100rem] h-[60rem] absolute right-1 opacity-40 z-0"
+        src={background}
+        placeholder="blur"
+        alt="imagem de fundo"
+        style={{
+          objectFit: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
     </>
   );
 }

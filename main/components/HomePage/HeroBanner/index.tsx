@@ -12,6 +12,7 @@ import { ThemeContext } from "../ThemeProvider/ThemeContext";
 
 import Image from "next/image";
 import euHeroBanner from "../../../assets/me-profile.jpeg";
+import background from "../../../assets/background-main-page.jpg";
 
 export function HeroBanner() {
   // H1 clicado ou não
@@ -21,23 +22,22 @@ export function HeroBanner() {
 
   return (
     <>
-      <motion.div className="max-[699px]:w-96 max-[699px]:ml-5 max-[699px]:w-96 bg-cover w-screen h-fit flex justify-center items-center ">
-        
+      <motion.div className="max-[699px]:w-96 max-[699px]:ml-3 max-[699px]:w-96  bg-cover w-screen h-fit flex justify-center items-center">
+
 
         <motion.div
           variants={GlobalVars}
           initial="elementoYFora"
           animate="elementoYEmTela"
           exit="elementoSaindo"
-          className="w-30 h-auto bg-zinc-800 flex flex-col justify-center items-center mt-40 mb-20 m-auto rounded-md"
+          className="w-30 h-auto bg-zinc-800 flex flex-col justify-center items-center mt-40 mb-20 m-auto rounded-md z-10"
         >
           <Image
             className="bg-cover w-96 h-96 rounded-full relative bottom-10 border-solid border-8 hover:scale-110 transition-all ease-in-out"
             src={euHeroBanner}
-            width={300}
-            height={300}
+            priority
             placeholder="blur"
-            alt="foto do legião"
+            alt="Eu herobanner"
             style={{
               objectFit: "cover",
               borderColor: theme?.hexadecimal,
@@ -99,6 +99,16 @@ export function HeroBanner() {
             </Link>
           </motion.div>
         </motion.div>
+        <Image
+            className="w-full bottom-16 h-5/6 absolute right-1 opacity-40"
+            src={background}
+            placeholder="blur"
+            
+            alt="imagem de fundo"
+            style={{
+              objectFit: "cover",
+            }}
+          />
       </motion.div>
     </>
   );
