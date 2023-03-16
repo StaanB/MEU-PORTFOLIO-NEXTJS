@@ -28,7 +28,7 @@ export function ContactMe() {
 
   return (
     <>
-      <div className="max-[699px]:w-96 max-[699px]:ml-4 w-screen h-auto flex flex-col justify-center items-center bg-zinc-800">
+      <div className="max-[699px]:w-96 max-[699px]:ml-4 w-full h-auto flex flex-col justify-center items-center bg-zinc-800">
         <BsPhoneFill
           className="w-8 h-8 mt-10 mb-3"
           style={{ color: theme?.hexadecimal }}
@@ -42,8 +42,8 @@ export function ContactMe() {
           {lang === "pt-BR" ? "Contato" : "Contact"}
         </motion.h2>
 
-        <div className="max-[1080px]:flex-col max-[1080px]:gap-10 max-[1080px]:ml-6 w-5/6 mr-10 flex justify-between items-center mb-10">
-          <div className="flex flex-col items-center gap-5">
+        <div className="max-[1080px]:flex-col max-[1080px]:gap-10 max-[1080px]:ml-24 w-5/6 mr-24 flex justify-center items-center mb-10">
+          <div className="w-fit flex flex-col items-center gap-5">
             <BsTelephoneFill
               className="text-4xl"
               style={{ color: theme?.hexadecimal }}
@@ -67,7 +67,7 @@ export function ContactMe() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-5">
+          <div className="w-fit flex flex-col items-center gap-5">
             <AiFillMail
               className="text-4xl"
               style={{ color: theme?.hexadecimal }}
@@ -96,7 +96,7 @@ export function ContactMe() {
             </Link>
           </div>
 
-          <div className="flex flex-col items-center gap-5">
+          <div className="w-fit flex flex-col items-center gap-5">
             <BsWhatsapp
               className="text-4xl"
               style={{ color: theme?.hexadecimal }}

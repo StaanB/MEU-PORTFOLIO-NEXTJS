@@ -39,7 +39,7 @@ export function Habilities() {
             {lang === "pt-BR" ? "Projetos" : "Projects"}
           </motion.h2>
           <div className="w-4/6 flex max-[1080px]:flex-col max-[1080px]:gap-7 items-center justify-between gap-8">
-            <div className="w-15 h-auto p-3 gap-5 rounded-md bg-zinc-800 flex flex-col items-center justify-between hover:scale-110 transition-all ease-in-out">
+            <div className="w-80 h-15 p-3 gap-5 rounded-md bg-zinc-800 flex flex-col items-center justify-between hover:scale-110 transition-all ease-in-out">
               <Image
                 src={stMoney}
                 width={300}
@@ -48,7 +48,7 @@ export function Habilities() {
                 alt="foto do st-money"
                 style={{ objectFit: "cover" }}
               />
-              <p className="font-bold text-md mb-2 w-5/6 text-center">
+              <p className="font-bold text-md mb-2 w-4/6 text-center">
                 {lang === "pt-BR"
                   ? "Site para controle de despesas."
                   : "Expense tracking website."}
@@ -63,7 +63,7 @@ export function Habilities() {
               </Link>
             </div>
 
-            <div className="w-15 h-auto p-3 gap-3 rounded-md bg-zinc-800 flex flex-col items-center justify-evenly hover:scale-110 transition-all ease-in-out">
+            <div className="w-80 h-auto p-3 gap-3 rounded-md bg-zinc-800 flex flex-col items-center justify-evenly hover:scale-110 transition-all ease-in-out">
               <Image
                 src={legiao}
                 width={300}
@@ -72,7 +72,7 @@ export function Habilities() {
                 alt="foto do legião"
                 style={{ objectFit: "cover" }}
               />
-              <p className="font-bold text-md mb-2 w-5/6 text-center">
+              <p className="font-bold text-md mb-2 w-4/6 text-center">
                 {lang === "pt-BR"
                   ? "Site do motoclube Legião Sem Fronteiras."
                   : "Legion motorcycle club website."}
@@ -87,7 +87,7 @@ export function Habilities() {
               </Link>
             </div>
 
-            <div className="w-15 h-auto p-3 gap-3 rounded-md bg-zinc-800 flex flex-col items-center justify-evenly hover:scale-110 transition-all ease-in-out">
+            <div className="w-80 h-auto p-3 gap-3 rounded-md bg-zinc-800 flex flex-col items-center justify-evenly hover:scale-110 transition-all ease-in-out">
               <Image
                 src={Cadastros}
                 width={300}
@@ -96,7 +96,7 @@ export function Habilities() {
                 alt="foto da página de cadastros"
                 style={{ objectFit: "cover" }}
               />
-              <p className="font-bold text-md mb-2 w-5/6 text-center">
+              <p className="font-bold text-md mb-2 w-4/6 text-center">
                 {lang === "pt-BR"
                   ? "Site para cadastro de usuários."
                   : "Website for user registration."}

@@ -39,14 +39,14 @@ export const MobileNavBar = () => {
     <>
       <button
         onClick={showNavBar}
-        className="min-[700px]:hidden absolute left-[98%] "
+        className="min-[700px]:hidden absolute left-[95%] top-[3%]"
       >
-        <GiHamburgerMenu className="text-2xl" />
+        <GiHamburgerMenu className="text-3xl" />
       </button>
       <nav>
         <motion.ul
           id="mobile-nav"
-          className="oculto max-[700px]:flex z-20 bg-[#27272a] rounded-md p-3 text-sm font-bold uppercase hidden gap-7 relative top-32 left-4 right-0 bottom-0"
+          className="oculto max-[700px]:flex z-20 bg-[#27272a] rounded-md p-3 text-sm font-bold uppercase hidden gap-7 relative top-[8.5rem] right-1 bottom-0"
         >
           <ActiveLink href="/">
             <motion.li

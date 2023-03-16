@@ -29,7 +29,6 @@ export function AboutMe() {
     "Data de nascimento": "08-12-2000",
     Celular: "+55 (71) 9 8689-5914",
     Email: "stanleybrenner@gmail.com",
-    Site: "https://meu-portfolio-next-js.vercel.app/",
     Endereço: "Salvador-BA",
   };
 
@@ -37,7 +36,6 @@ export function AboutMe() {
     Birthdate: "08-12-2000",
     Phone: "+55 71986895914",
     Email: "stanleybrenner@gmail.com",
-    Website: "https://meu-portfolio-next-js.vercel.app/",
     Addres: "Brazil Salvador-BA",
   };
 
@@ -78,7 +76,7 @@ export function AboutMe() {
             <h3 className="max-[699px]:text-2xl text-3xl font-bold">
               {lang === "pt-BR" ? "Detalhes Pessoais" : "Personal Details"}
             </h3>
-            <div className="max-[375px]:text-sm  flex gap-7">
+            <div className="max-[375px]:text-sm flex gap-7">
               <div>
                 {Object.keys(
                   lang === "pt-BR" ? informationsBR : informationsEN
@@ -102,7 +100,7 @@ export function AboutMe() {
                   return (
                     <p
                       key={key}
-                      className="max-[699px]:mb-[1.40rem] max-[699px]:text-left mb-3 tracking-[0.1rem] font-bold"
+                      className="max-[699px]:mb-[1.40rem] max-[699px]:text-left max-[699px]:break-all mb-3 tracking-[0.1rem] font-bold"
                     >
                       {valor}
                     </p>

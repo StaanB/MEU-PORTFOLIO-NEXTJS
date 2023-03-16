@@ -31,7 +31,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="elementoYEmTela"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://www.w3schools.com/html/" target="_blank">
             <AiFillHtml5
@@ -64,7 +64,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY2"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a
             href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
@@ -100,7 +100,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY4"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://git-scm.com" target="_blank">
             <BsGit
@@ -133,7 +133,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY6"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://vitejs.dev" target="_blank">
             <SiVite
@@ -151,13 +151,13 @@ export function TechSkills() {
           >
             Vite/NPM
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Para construção de aplicações tenho utilizado Vite, mas também uso NPM frequentemente."
               : "For building applications I've been using Vite, but I also use NPM often."}
           </p>
 
-          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-3">
+          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-5">
             {lang === "pt-BR"
               ? "Não utilizado nesse site"
               : "Not used on this site"}
@@ -168,7 +168,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY8"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://pt-br.reactjs.org" target="_blank">
             <FaReact
@@ -186,7 +186,7 @@ export function TechSkills() {
           >
             ReactJS
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Em React sei usar hooks de estado, contexto, rotas, componentes e consumo de APIs."
               : "In React I know how to use state, context, routes, components and API consumption hooks."}
@@ -201,7 +201,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY10"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://tailwindui.com" target="_blank">
             <SiTailwindcss
@@ -219,7 +219,7 @@ export function TechSkills() {
           >
             TailwindCSS
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Além de TailwindCSS tenho conhecimento de Bootstrap, Styled-components, CSS Modules e SASS."
               : "I learned ReactJS right after mastering JS, I know how to use state hooks, context and the exclusive frameworks."}
@@ -234,7 +234,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY12"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://www.cypress.io" target="_blank">
             <SiCypress
@@ -252,13 +252,13 @@ export function TechSkills() {
           >
             Cypress/JestJS
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Para testes costumo utilizar Cypress para ReactJS e alguns outros projetos JestJS."
               : "For testing I usually use Cypress for ReactJS and some other JestJs projects."}
           </p>
 
-          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-3">
+          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-5">
             {lang === "pt-BR"
               ? "Não utilizado nesse site"
               : "Not used on this site"}
@@ -269,7 +269,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY14"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://www.typescriptlang.org" target="_blank">
             <SiTypescript
@@ -287,7 +287,7 @@ export function TechSkills() {
           >
             Typescript
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Para tipagem de linguagem uso Typescript, o mais famoso e conhecido do Javascript."
               : "For language typing I use Typescript, the most famous and well-known Javascript."}
@@ -302,7 +302,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY16"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://nextjs.org" target="_blank">
             <SiNextdotjs
@@ -320,7 +320,7 @@ export function TechSkills() {
           >
             NextJS
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Utilizo NextJS como Framework Server Side Rendering mas conheci um pouco de RemixJS também."
               : "I use NextJS as a Server Side Rendering Framework but I got to know a little about RemixJS as well."}
@@ -335,7 +335,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY18"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://www.framer.com" target="_blank">
             <SiFramer
@@ -353,7 +353,7 @@ export function TechSkills() {
           >
             Framer Motion
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Utilizei o Motion do Framer para fazer todas as animações presentes nesse site e em alguns outros."
               : "I used Motion from Framer to make all the animations present on this site and on some others."}
@@ -368,7 +368,7 @@ export function TechSkills() {
           variants={GlobalVars}
           initial="elementoYFora"
           animate="delayY20"
-          className="w-4/6 h-72 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
+          className="w-4/6 h-80 flex flex-col items-center justify-between p-2 bg-[#27272a] mb-10 rounded-md"
         >
           <a href="https://www.python.org" target="_blank">
             <SiPython
@@ -386,13 +386,13 @@ export function TechSkills() {
           >
             Python
           </h3>
-          <p className="w-4/6 text-center leading-5 mb-3">
+          <p className="w-5/6 text-center leading-5 mb-3">
             {lang === "pt-BR"
               ? "Primeira linguagem que aprendi, sei o básico da linguagem mas nunca cheguei a estudar Django ou outros frameworks."
               : "First language I learned, I know the basics of the language but I never got to study Django or other frameworks."}
           </p>
 
-          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-3">
+          <span className="bg-red-900 p-1 font-bold rounded-md hover:bg-red-700 hover:scale-110 transition ease mb-5">
             {lang === "pt-BR"
               ? "Não utilizado nesse site"
               : "Not used on this site"}

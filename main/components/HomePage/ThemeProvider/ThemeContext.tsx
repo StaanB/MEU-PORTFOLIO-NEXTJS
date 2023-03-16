@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }: any) => {
   // Cor padrão do tema
   const [theme, setTheme] = useState({
     hexadecimal: "#EA580C",
-    shadow: "0px 0px 40px 5px #EA580C",
+    shadow: "0px 0px 20px 2px #EA580C",
   });
 
   // Idioma padrão do site
